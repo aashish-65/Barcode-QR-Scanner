@@ -1,0 +1,28 @@
+.qr-scanner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+    max-width: 600px; /* Limit width for smaller screens */
+    margin: 0 auto; /* Center container on page */
+}
+
+.loading-message {
+    color: #007bff; /* Blue color for loading */
+    font-size: 18px;
+    font-weight: bold; /* Emphasize loading text */
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #d9534f; /* Slightly softer red for errors */
+    font-size: 16px;
+    font-weight: bold; /* Emphasize error text */
+    text-align: center; /* Center-align for readability */
+    margin-bottom: 10px;
+}

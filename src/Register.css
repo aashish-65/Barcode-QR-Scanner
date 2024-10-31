@@ -1,0 +1,96 @@
+/* Register.css */
+
+.register-container {
+    max-width: 450px; /* Slightly wider for better readability */
+    width: 90%; /* Responsive width for smaller screens */
+    margin: 40px auto; /* Center and add space above */
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .club-name-register {
+    text-align: center; /* Center align the club name */
+    color: #ff6f61; /* Primary color for the club name */
+    font-size: 2.5em; /* Larger font size for emphasis */
+    margin-bottom: 15px; /* Spacing below the club name */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff; /* Primary color for focused input */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .error-message,
+  .success-message {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: #e63946; /* Red color for errors */
+  }
+  
+  .success-message {
+    color: #2a9d8f; /* Green color for success messages */
+  }
+  
+  .back-button {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #6c757d; /* Gray for back button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }
+  

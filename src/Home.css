@@ -1,0 +1,100 @@
+/* Home.css */
+
+.home-container {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text color */
+    background-color: #f4f4f4; /* Light background color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    text-align: center; /* Centered text */
+    padding: 20px;
+    background-color: #007bff; /* Header background color */
+    color: white; /* White text for contrast */
+  }
+  
+  .header .club-name-home {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5rem; /* Large font size */
+    color: #ff6f61;
+  }
+  
+  .header p {
+    font-size: 1.2em; /* Subheading font size */
+  }
+  
+  .navbar {
+    background-color: #333; /* Navbar background color */
+    padding: 10px 0; /* Padding for navbar */
+  }
+  
+  .navbar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+  
+  .navbar li {
+    display: inline; /* Inline elements */
+    margin: 0 20px; /* Space between items */
+  }
+  
+  .navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  section {
+    padding: 20px; /* Padding around sections */
+    margin: 20px auto; /* Center the section */
+    max-width: 800px; /* Max width for readability */
+    background-color: white; /* White background for sections */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  h2 {
+    color: #007bff; /* Header color for sections */
+  }
+  
+  .footer {
+    text-align: center; /* Centered footer text */
+    padding: 20px; /* Padding for footer */
+    background-color: #333; /* Footer background color */
+    color: white; /* White text for footer */
+  }
+  
+  .footer h3 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .footer p {
+    margin: 5px 0; /* Space between footer lines */
+  }
+
+  /* Home.css */
+
+.countdown-section {
+    text-align: center; /* Center the countdown section */
+    padding: 20px;
+    margin: 20px auto; /* Center the section */
+    max-width: 800px; /* Max width for readability */
+    background-color: white; /* White background for sections */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .countdown-timer {
+    font-size: 1.5em; /* Larger font size for the countdown */
+    color: #007bff; /* Primary color for the countdown */
+  }
+  
+  .countdown-timer span {
+    margin: 0 10px; /* Space between time units */
+  }
+  

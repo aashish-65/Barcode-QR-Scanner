@@ -1,38 +1,77 @@
+/* Main app container styling */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* Style for main buttons (Scan, Register) */
+.main-button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
   color: white;
+  background-color: #007bff; /* Blue background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover and active effects for main buttons */
+.main-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-button:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
 }
+
+/* Authorized screen styling */
+.authorized {
+  color: green; /* Success color */
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid green;
+  border-radius: 8px;
+  background-color: #e6ffe6; /* Light green background */
+  margin-top: 20px;
+}
+
+/* Unauthorized screen styling */
+.unauthorized {
+  color: red; /* Error color */
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 8px;
+  background-color: #ffe6e6; /* Light red background */
+  margin-top: 20px;
+}
+
+/* Register button within unauthorized message */
+.unauthorized button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.unauthorized button:hover {
+  background-color: #0056b3;
+}
+
+

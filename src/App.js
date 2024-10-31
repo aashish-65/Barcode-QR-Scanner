@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import QRScanner from './QRScanner';
+import Register from './Register';
+import Home from '../../barcode-qr-scanner/src/Home';
 import './App.css';
 
 function App() {
+  const [screen, setScreen] = useState('home');
+  const [userName, setUserName] = useState(null);
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
+  const handleScan = (isAuthorized, userName = '') => {
+    setIsAuthorized(isAuthorized);
+    setUserName(userName);
+    setScreen(isAuthorized ? 'authorized' : 'unauthorized');
+
+    if (isAuthorized) {
+      setTimeout(() => {
+        setScreen('home');
+        setUserName(null);
+        setIsAuthorized(false);
+      }, 3000);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {screen === 'home' && <Home onNavigate={setScreen} />}
+      {screen === 'scan' && <QRScanner onScan={handleScan} />}
+      {screen === 'authorized' && <div className="authorized"><h2>Welcome to CodeNEST, {userName}!</h2></div>}
+      {screen === 'unauthorized' && (
+        <div className="unauthorized">
+          <h2>Unauthorized</h2>
+          <button onClick={() => setScreen('register')}>Register</button>
+        </div>
+      )}
+      {screen === 'register' && <Register onBackToHome={() => setScreen('home')} />}
     </div>
   );
 }
