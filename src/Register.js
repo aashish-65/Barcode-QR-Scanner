@@ -100,7 +100,7 @@ function Register({ onBackToHome }) {
   return (
     <div className="register-container">
       <h1 className="club-name-register">CodeNEST</h1>
-      <h2>Register</h2>
+      <h2 className="register-title">Register</h2>
       {error && <p className="error-message">{error}</p>}
       {success && <p className="success-message">{success}</p>}
       <form onSubmit={handleSubmit}>
@@ -162,7 +162,10 @@ function Register({ onBackToHome }) {
         />
         <button type="submit">Register</button>
       </form>
-      <button className="back-button" onClick={onBackToHome}>
+      <button
+        className="back-button-register"
+        onClick={() => (window.location.href = "/")}
+      >
         Back to Home
       </button>
     </div>

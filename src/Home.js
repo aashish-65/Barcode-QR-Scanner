@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home({ onNavigate }) {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
 
   useEffect(() => {
     const targetDate = new Date('2024-11-20T00:00:00'); // Set target date and time
@@ -19,13 +21,16 @@ function Home({ onNavigate }) {
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        // Copy countdown state to trigger re-render
         setCountdown(prev => ({ ...prev, days, hours, minutes, seconds }));
       }
     }, 1000); // Update every second
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="home-container">
@@ -35,13 +40,18 @@ function Home({ onNavigate }) {
       </header>
 
       <nav className="navbar">
-        <ul>
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
           <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><button onClick={() => onNavigate('scan')}>Scan</button></li>
-          <li><button onClick={() => onNavigate('register')}>Register</button></li>
+          <li><Link to="/scan">Scan</Link></li>
+          <li><Link to="/register">Register</Link></li>
         </ul>
       </nav>
 
@@ -63,20 +73,17 @@ function Home({ onNavigate }) {
       <section id="projects" className="projects-section">
         <h2>Our Projects</h2>
         <p>Explore our various projects aimed at enhancing learning through practical experience.</p>
-        {/* Add project cards or list here */}
       </section>
 
       <section id="events" className="events-section">
         <h2>Upcoming Events</h2>
         <p>Join us for workshops, hackathons, and more!</p>
-        {/* Add event cards or list here */}
       </section>
 
       <footer className="footer">
         <h3>Contact Us</h3>
         <p>Email: contact@codenest.org</p>
         <p>Follow us on social media!</p>
-        {/* Add social media links here */}
       </footer>
     </div>
   );

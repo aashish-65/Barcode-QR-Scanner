@@ -12,17 +12,33 @@
     margin: 0 auto; /* Center container on page */
 }
 
-.loading-message {
+.loading-message-scanner {
     color: #007bff; /* Blue color for loading */
     font-size: 18px;
     font-weight: bold; /* Emphasize loading text */
     margin-bottom: 10px;
 }
 
-.error-message {
+.error-message-scanner {
     color: #d9534f; /* Slightly softer red for errors */
     font-size: 16px;
     font-weight: bold; /* Emphasize error text */
     text-align: center; /* Center-align for readability */
     margin-bottom: 10px;
 }
+
+.back-button-scanner {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #6c757d; /* Gray for back button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button-scanner:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }

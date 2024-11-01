@@ -1,100 +1,182 @@
 /* Home.css */
 
 .home-container {
-    font-family: 'Arial', sans-serif;
-    color: #333; /* Dark text color */
-    background-color: #f4f4f4; /* Light background color */
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header {
-    text-align: center; /* Centered text */
-    padding: 20px;
-    background-color: #007bff; /* Header background color */
-    color: white; /* White text for contrast */
-  }
-  
-  .header .club-name-home {
-    margin: 0; /* Remove default margin */
-    font-size: 2.5rem; /* Large font size */
-    color: #ff6f61;
-  }
-  
-  .header p {
-    font-size: 1.2em; /* Subheading font size */
-  }
-  
-  .navbar {
-    background-color: #333; /* Navbar background color */
-    padding: 10px 0; /* Padding for navbar */
-  }
-  
-  .navbar ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-  }
-  
-  .navbar li {
-    display: inline; /* Inline elements */
-    margin: 0 20px; /* Space between items */
-  }
-  
-  .navbar a {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
-  section {
-    padding: 20px; /* Padding around sections */
-    margin: 20px auto; /* Center the section */
-    max-width: 800px; /* Max width for readability */
-    background-color: white; /* White background for sections */
-    border-radius: 8px; /* Round corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
-  h2 {
-    color: #007bff; /* Header color for sections */
-  }
-  
-  .footer {
-    text-align: center; /* Centered footer text */
-    padding: 20px; /* Padding for footer */
-    background-color: #333; /* Footer background color */
-    color: white; /* White text for footer */
-  }
-  
-  .footer h3 {
-    margin: 0; /* Remove default margin */
-  }
-  
-  .footer p {
-    margin: 5px 0; /* Space between footer lines */
-  }
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark text color */
+  background-color: #f4f4f4; /* Light background color */
+  margin: 0;
+  padding: 0;
+}
 
-  /* Home.css */
+.header {
+  text-align: center; /* Centered text */
+  padding: 20px;
+  background-color: #007bff; /* Header background color */
+  color: white; /* White text for contrast */
+}
+
+.header .club-name-home {
+  margin: 0; /* Remove default margin */
+  font-size: 2.5rem; /* Large font size */
+  color: #ff6f61;
+}
+
+.header p {
+  font-size: 1.2em; /* Subheading font size */
+}
+
+.navbar {
+  background-color: #333; /* Navbar background color */
+  padding: 10px 0; /* Padding for navbar */
+  position: relative; /* Position relative for absolute positioning of the menu */
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack lines vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 20px; /* Margin around the hamburger */
+}
+
+.hamburger .line {
+  height: 3px; /* Line thickness */
+  width: 25px; /* Line width */
+  background-color: white; /* Line color */
+  margin: 3px 0; /* Space between lines */
+  transition: 0.3s; /* Smooth transition */
+}
+
+.navbar ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center navbar items */
+}
+
+.navbar-menu {
+  display: flex; /* Horizontal layout by default */
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.navbar-menu.open {
+  display: block; /* Show menu when open */
+}
+
+.navbar li {
+  margin: 0 10px; /* Space between items */
+}
+
+.navbar a {
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+section {
+  padding: 20px; /* Padding around sections */
+  margin: 20px auto; /* Center the section */
+  max-width: 800px; /* Max width for readability */
+  background-color: white; /* White background for sections */
+  border-radius: 8px; /* Round corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+  color: #007bff; /* Header color for sections */
+}
+
+.footer {
+  text-align: center; /* Centered footer text */
+  padding: 20px; /* Padding for footer */
+  background-color: #333; /* Footer background color */
+  color: white; /* White text for footer */
+}
+
+.footer h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.footer p {
+  margin: 5px 0; /* Space between footer lines */
+}
 
 .countdown-section {
-    text-align: center; /* Center the countdown section */
-    padding: 20px;
-    margin: 20px auto; /* Center the section */
-    max-width: 800px; /* Max width for readability */
-    background-color: white; /* White background for sections */
-    border-radius: 8px; /* Round corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center the countdown section */
+  padding: 20px;
+  margin: 20px auto; /* Center the section */
+  max-width: 800px; /* Max width for readability */
+  background-color: white; /* White background for sections */
+  border-radius: 8px; /* Round corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.countdown-timer {
+  font-size: 1.5em; /* Larger font size for the countdown */
+  color: #007bff; /* Primary color for the countdown */
+}
+
+.countdown-timer span {
+  margin: 0 10px; /* Space between time units */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items */
+    position: absolute; /* Position the menu absolutely */
+    top: 60px; /* Position below the navbar */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    background-color: #333; /* Background color for dropdown */
+    display: none; /* Hide menu by default */
   }
-  
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  .navbar li {
+    margin: 5px 0; /* Space between items when stacked */
+  }
+
+  .header h1 {
+    font-size: 2rem; /* Reduce header font size */
+  }
+
+  .header p {
+    font-size: 1em; /* Reduce subheading font size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce section header size */
+  }
+
   .countdown-timer {
-    font-size: 1.5em; /* Larger font size for the countdown */
-    color: #007bff; /* Primary color for the countdown */
+    font-size: 1.2em; /* Adjust countdown font size */
   }
-  
-  .countdown-timer span {
-    margin: 0 10px; /* Space between time units */
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px; /* Reduce padding */
   }
-  
+
+  .header h1 {
+    font-size: 1.5rem; /* Further reduce header font size */
+  }
+
+  .navbar li {
+    margin: 3px 0; /* Smaller margin for stacked items */
+  }
+}

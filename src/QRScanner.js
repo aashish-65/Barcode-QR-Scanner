@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BarcodeScannerComponent from 'react-qr-barcode-scanner';
 import './QRScanner.css';
 
-function QRScanner({ onScan }) {
+function QRScanner({ onAuthorized }) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleScan = async (error, result) => {
     if (result) {
       const id = result.text;
       setLoading(true);
-      setError(null); // Clear any previous errors
+      setError(null);
 
       try {
         const response = await fetch(`https://registrationsystem-1a4m.onrender.com/api/users/${id}`);
         const data = await response.json();
 
         if (response.ok) {
-          onScan(true, data.user.name);
+          onAuthorized(true, data.user.name);
+          navigate('/authorized', { state: { userName: data.user.name } });
         } else {
-          onScan(false);
+          onAuthorized(false);
+          navigate('/unauthorized');
         }
       } catch (err) {
         setError('Error scanning QR code. Please check your connection.');
@@ -33,14 +37,17 @@ function QRScanner({ onScan }) {
 
   return (
     <div className="qr-scanner-container">
-      {loading && <p className="loading-message">Loading...</p>}
-      {error && <p className="error-message">{error}</p>}
+      {loading && <p className="loading-message-scanner">Loading...</p>}
+      {error && <p className="error-message-scanner">{error}</p>}
       <BarcodeScannerComponent
         onUpdate={handleScan}
         facingMode="environment"
         delay={500}
         style={{ width: '100%', height: 'auto' }}
       />
+      <button className="back-button-scanner" onClick={() => navigate('/')}>
+        Back to Home
+      </button>
     </div>
   );
 }

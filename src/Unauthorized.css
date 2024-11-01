@@ -1,0 +1,75 @@
+/* Unauthorized.css */
+
+.unauthorized-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #F44336, #ef5350cd, #e91e1e); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-unauthorized {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.unauthorized-message {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #c70f0f;
+}
+
+.description-unauthorized {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.register-button-unauthorized, .back-button-unauthorized {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.register-button-unauthorized {
+    background-color: #ffffff;
+    color: #F44336;
+}
+
+.register-button-unauthorized:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+.back-button-unauthorized {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #F44336;
+}
+
+.back-button-unauthorized:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .unauthorized-message {
+        font-size: 2rem;
+    }
+
+    .description-unauthorized {
+        font-size: 1rem;
+    }
+
+    .register-button-unauthorized, .back-button-unauthorized {
+        font-size: 1rem;
+    }
+}

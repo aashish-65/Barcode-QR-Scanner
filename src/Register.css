@@ -19,7 +19,7 @@
     font-weight: bold; /* Make it bold */
   }
   
-  h2 {
+  .register-title {
     text-align: center;
     color: #007bff;
     font-size: 24px;
@@ -78,7 +78,7 @@
     color: #2a9d8f; /* Green color for success messages */
   }
   
-  .back-button {
+  .back-button-register {
     padding: 10px;
     margin-top: 15px;
     background-color: #6c757d; /* Gray for back button */
@@ -90,7 +90,7 @@
     transition: background-color 0.3s;
   }
   
-  .back-button:hover {
+  .back-button-register:hover {
     background-color: #5a6268; /* Darker gray on hover */
   }
   
