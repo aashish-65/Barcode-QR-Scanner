@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QRScanner from './QRScanner';
 import Register from './Register';
-import Home from '../../barcode-qr-scanner/src/Home';
+import Home from './Home';
 import './App.css';
 
 function App() {
