@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import QRScanner from './QRScanner';
 import Register from './Register';
-import Home from '../../barcode-qr-scanner/src/Home';
+import Home from './Home';
 import './App.css';
 import NotFound from './NotFound';
+import Authorized from './Authorized';
+import Unauthorized from './Unauthorized';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
