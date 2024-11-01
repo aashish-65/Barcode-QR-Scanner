@@ -1,0 +1,72 @@
+/* NotFound.css */
+
+.notfound-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f44336, #ef5350); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-notfound {
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.error-code {
+    font-size: 6rem; /* Large font size for error code */
+    margin-bottom: 10px;
+    color: #ddd2d1;
+}
+
+.error-message-notfound {
+    font-size: 2rem; /* Medium font size for error message */
+    margin-bottom: 10px;
+    color: #7e5c5a;
+}
+
+.description-notfound {
+    font-size: 1.2rem; /* Standard font size for description */
+    margin-bottom: 20px;
+}
+
+.home-button-notfound {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    background-color: #ffffff; /* White background for button */
+    color: #f44336; /* Matching color with the gradient */
+}
+
+.home-button-notfound:hover {
+    background-color: #f0f0f0; /* Lighten button on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .error-code {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    .error-message-notfound {
+        font-size: 1.5rem; /* Smaller error message */
+    }
+
+    .description-notfound {
+        font-size: 1rem; /* Smaller description */
+    }
+
+    .home-button-notfound {
+        font-size: 1rem; /* Smaller button text */
+    }
+}

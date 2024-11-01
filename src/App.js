@@ -6,6 +6,7 @@ import Home from './Home';
 import Authorized from './Authorized';
 import Unauthorized from './Unauthorized';
 import './App.css';
+import NotFound from './NotFound';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
@@ -30,7 +31,7 @@ function App() {
           {/* Conditionally render UnauthorizedMessage or redirect to /scan if not unauthorized */}
           <Route path="/unauthorized" element={isUnauthorized ? <UnauthorizedMessage /> : <Navigate to="/scan" />} />
           {/* Redirect any undefined route to Home */}
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
@@ -44,7 +45,7 @@ function AuthorizedMessage({ userName }) {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/scan');  // Redirect to the scan page after 5 seconds
-    }, 300000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
