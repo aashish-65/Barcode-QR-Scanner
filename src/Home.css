@@ -3,7 +3,7 @@
 .home-container {
   font-family: 'Arial', sans-serif;
   color: #333; /* Dark text color */
-  background-color: #f4f4f4; /* Light background color */
+  background-color: #f6f6f6; /* Light background color */
   margin: 0;
   padding: 0;
 }
@@ -11,39 +11,58 @@
 .header {
   text-align: center; /* Centered text */
   padding: 20px;
-  background-color: #007bff; /* Header background color */
-  color: white; /* White text for contrast */
+  background-color: #dcdcdc; /* Header background color */
+  color: #2a2a2a; /* Text color */
 }
 
-.header .club-name-home {
-  margin: 0; /* Remove default margin */
-  font-size: 2.5rem; /* Large font size */
-  color: #ff6f61;
+.logo-section {
+  text-align: center; /* Center-align logo and slogan */
+  margin: 20px 0; /* Vertical spacing around the section */
 }
 
-.header p {
-  font-size: 1.2em; /* Subheading font size */
+.club-icon-logo {
+  width: 60px; /* Set desired width for the icon */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 10px; /* Center and add spacing below icon */
+  display: block; /* Center icon */
+  opacity: 0.8; /* Slight opacity for a subtle look */
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.club-icon-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.club-name-logo {
+  width: 300px; /* Set desired width for logo */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the logo */
+  display: block; /* Ensure centering with margin auto */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.club-name-logo:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.club-slogan-logo {
+  width: 400px; /* Adjust width for slogan */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto 0; /* Spacing above slogan */
+  display: block; /* Center the slogan */
+  opacity: 0.9; /* Slight opacity for styling */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.club-slogan-logo:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .navbar {
-  background-color: #333; /* Navbar background color */
-  padding: 10px 0; /* Padding for navbar */
-  position: relative; /* Position relative for absolute positioning of the menu */
-}
-
-.hamburger {
-  display: none; /* Hidden by default */
-  flex-direction: column; /* Stack lines vertically */
-  cursor: pointer; /* Pointer cursor on hover */
-  margin: 0 20px; /* Margin around the hamburger */
-}
-
-.hamburger .line {
-  height: 3px; /* Line thickness */
-  width: 25px; /* Line width */
-  background-color: white; /* Line color */
-  margin: 3px 0; /* Space between lines */
-  transition: 0.3s; /* Smooth transition */
+  background-color: #111; /* Dark background for better contrast */
+  padding: 15px; /* Increased padding for more clickable area */
+  position: relative; /* For absolute positioning of dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .navbar ul {
@@ -52,6 +71,7 @@
   display: flex; /* Use flexbox for horizontal layout */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: center; /* Center navbar items */
+  margin: 0; /* Remove default margin */
 }
 
 .navbar-menu {
@@ -65,29 +85,67 @@
 }
 
 .navbar li {
-  margin: 0 10px; /* Space between items */
+  position: relative; /* Position relative for dropdowns if needed */
+  margin: 0 15px; /* Space between items */
+  transition: transform 0.3s; /* Smooth transform */
+}
+
+.navbar li:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover for interaction */
 }
 
 .navbar a {
-  color: white; /* White text color */
+  color: #ffffff; /* White text color */
   text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Add padding for better clickable area */
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 .navbar a:hover {
-  text-decoration: underline; /* Underline on hover */
+  background-color: #6b6b6bc5; /* Change background on hover */
+  color: #fff; /* Ensure text color is white */
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack lines vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 20px; /* Margin around the hamburger */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.hamburger .line {
+  height: 3px; /* Line thickness */
+  width: 25px; /* Line width */
+  background-color: white; /* Line color */
+  margin: 3px 0; /* Space between lines */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg); /* First line transforms to form an 'X' */
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0; /* Middle line fades out */
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg); /* Last line transforms to form an 'X' */
 }
 
 section {
   padding: 20px; /* Padding around sections */
   margin: 20px auto; /* Center the section */
   max-width: 800px; /* Max width for readability */
-  background-color: white; /* White background for sections */
+  background-color: #ffffff; /* White background for sections */
   border-radius: 8px; /* Round corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 h2 {
-  color: #007bff; /* Header color for sections */
+  color: #2a2a2a; /* Header color for sections */
 }
 
 .footer {
@@ -110,7 +168,6 @@ h2 {
   padding: 20px;
   margin: 20px auto; /* Center the section */
   max-width: 800px; /* Max width for readability */
-  background-color: white; /* White background for sections */
   border-radius: 8px; /* Round corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
@@ -134,24 +191,41 @@ h2 {
     top: 60px; /* Position below the navbar */
     left: 0; /* Align to left */
     right: 0; /* Align to right */
-    background-color: #333; /* Background color for dropdown */
+    background-color: #333; /* Dark background for dropdown */
     display: none; /* Hide menu by default */
+    z-index: 1000; /* Bring it above other content */
   }
 
   .navbar-menu.open {
     display: flex; /* Show menu when open */
   }
 
+  .navbar li {
+    margin: 10px 0; /* Space between items when stacked */
+  }
+
   .hamburger {
     display: flex; /* Show hamburger on mobile */
   }
 
-  .navbar li {
-    margin: 5px 0; /* Space between items when stacked */
-  }
-
   .header h1 {
     font-size: 2rem; /* Reduce header font size */
+  }
+
+  .club-icon-logo {
+    width: 50px; /* Smaller icon for tablets */
+  }
+
+  .club-name-logo {
+    width: 250px; /* Slightly reduce main logo size */
+  }
+
+  .club-slogan-logo {
+    width: 320px; /* Adjust slogan width */
+  }
+
+  .logo-section {
+    margin: 15px 0; /* Reduce vertical spacing */
   }
 
   .header p {
@@ -174,6 +248,22 @@ h2 {
 
   .header h1 {
     font-size: 1.5rem; /* Further reduce header font size */
+  }
+
+  .club-icon-logo {
+    width: 40px; /* Smaller icon for mobile */
+  }
+
+  .club-name-logo {
+    width: 200px; /* Smaller logo for mobile */
+  }
+
+  .club-slogan-logo {
+    width: 280px; /* Reduce slogan width */
+  }
+
+  .logo-section {
+    margin: 10px 0; /* Further reduce spacing */
   }
 
   .navbar li {

@@ -4,14 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(
     135deg,
     #4caf4f,
     #85af87,
     #4caf4f
   ); /* Gradient background */
-  color: white;
+  color: #dcdcdc;
   text-align: center;
   padding: 20px;
 }
@@ -30,15 +30,57 @@
   color: #0e6211;
 }
 
-.codenest-name-authorized {
+/* .codenest-name-authorized {
   color: #ff6e61f2;
   font-size: 2.5rem;
-}
+} */
+
+.logo-section-authorized {
+    text-align: center; /* Center-align logo and slogan */
+    margin: 20px 0; /* Vertical spacing around the section */
+  }
+  
+  .club-icon-logo-authorized {
+    width: 40px; /* Set desired width for the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 10px; /* Center and add spacing below icon */
+    display: block; /* Center icon */
+    opacity: 0.8; /* Slight opacity for a subtle look */
+    transition: transform 0.3s ease; /* Hover effect */
+  }
+  
+  .club-icon-logo-authorized:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .club-name-logo-authorized {
+    width: 180px; /* Set desired width for logo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Ensure centering with margin auto */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+  }
+  
+  .club-name-logo-authorized:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  .club-slogan-logo-authorized:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .club-slogan-logo-authorized {
+    width: 300px; /* Adjust width for slogan */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto 0; /* Spacing above slogan */
+    display: block; /* Center the slogan */
+    opacity: 0.9; /* Slight opacity for styling */
+    transition: transform 0.3s ease;
+  }
 
 .user-name-authorized {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #5b4d47f2;
+  color: #2a2a2a;
 }
 
 .description-authorized {
@@ -49,7 +91,7 @@
 .action-button-authorized {
   padding: 10px 20px;
   font-size: 1.2rem;
-  background-color: #ffffff;
+  background-color: #f4f1f1;
   color: #4caf50;
   border: none;
   border-radius: 5px;
@@ -58,7 +100,7 @@
 }
 
 .action-button-authorized:hover {
-  background-color: #f0f0f0;
+  background-color: #dcdcdc;
   transform: scale(1.05); /* Slight scaling effect */
 }
 
@@ -68,6 +110,22 @@
   .user-name-authorized,
   .codenest-name-authorized {
     font-size: 2rem;
+  }
+
+  .club-icon-logo-authorized {
+    width: 30px; /* Smaller icon for tablets */
+  }
+
+  .club-name-logo-authorized {
+    width: 150px; /* Slightly reduce main logo size */
+  }
+
+  .club-slogan-logo-authorized {
+    width: 260px; /* Adjust slogan width */
+  }
+
+  .logo-section-authorized {
+    margin: 15px 0; /* Reduce vertical spacing */
   }
 
   .description-authorized {

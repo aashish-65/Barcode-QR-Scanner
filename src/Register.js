@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Register.css";
+import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
+import CodeNESTSlogan from "./assets/svg/Slogan.svg";
+import CodeNESTIcon from "./assets/svg/icon.svg";
 
-function Register({ onBackToHome }) {
+function Register() {
   const [formData, setFormData] = useState({
     name: "",
     collegeEmail: "",
@@ -14,6 +18,7 @@ function Register({ onBackToHome }) {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -99,7 +104,24 @@ function Register({ onBackToHome }) {
 
   return (
     <div className="register-container">
-      <h1 className="club-name-register">CodeNEST</h1>
+      {/* <h1 className="club-name-register">CodeNEST</h1> */}
+      <div className="logo-section">
+          <img
+            src={CodeNESTIcon}
+            alt="CodeNEST Logo"
+            className="club-icon-logo"
+          />
+          <img
+            src={CodeNESTTitle}
+            alt="CodeNEST Logo"
+            className="club-name-logo"
+          />
+          <img
+            src={CodeNESTSlogan}
+            alt="CodeNEST Slogan"
+            className="club-slogan-logo"
+          />
+        </div>
       <h2 className="register-title">Register</h2>
       {error && <p className="error-message">{error}</p>}
       {success && <p className="success-message">{success}</p>}
@@ -164,7 +186,7 @@ function Register({ onBackToHome }) {
       </form>
       <button
         className="back-button-register"
-        onClick={() => (window.location.href = "/")}
+        onClick={() => navigate('/')}
       >
         Back to Home
       </button>

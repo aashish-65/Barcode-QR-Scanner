@@ -6,7 +6,7 @@
     margin: 40px auto; /* Center and add space above */
     padding: 25px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f4f3f3;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
@@ -21,8 +21,8 @@
   
   .register-title {
     text-align: center;
-    color: #007bff;
-    font-size: 24px;
+    color: #2a2a2a;
+    font-size: 30px;
     margin-bottom: 25px;
     font-weight: 600;
   }
@@ -48,7 +48,7 @@
   
   button {
     padding: 12px;
-    background-color: #007bff; /* Primary button color */
+    background-color: #3f3f3f; /* Primary button color */
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -59,7 +59,7 @@
   }
   
   button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #111111; /* Darker shade on hover */
   }
   
   .error-message,
@@ -91,6 +91,6 @@
   }
   
   .back-button-register:hover {
-    background-color: #5a6268; /* Darker gray on hover */
+    background-color: #2a2a2a; /* Darker gray on hover */
   }
   
