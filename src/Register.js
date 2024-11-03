@@ -4,6 +4,7 @@ import "./Register.css";
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";
+import QRCode from "qrcode"
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -73,6 +74,13 @@ function Register() {
       if (response.ok) {
         setSuccess("Registration successful!");
         setError("");
+
+        // Step 2: Generate the QR code with collegeId
+        const qrCodeDataUrl = await QRCode.toDataURL(formData.collegeId);
+
+        // Step 3: Send the email with the QR code
+        await sendEmailWithQRCode(formData.name, formData.collegeEmail, qrCodeDataUrl);
+
         setFormData({
           name: "",
           collegeEmail: "",
@@ -88,6 +96,28 @@ function Register() {
       }
     } catch (err) {
       setError("Error registering. Please check your connection.");
+    }
+  };
+
+  // Function to send email with QR code
+  const sendEmailWithQRCode = async (name, collegeEmail, qrCode) => {
+    try {
+      const emailResponse = await fetch(
+        "https://registrationsystem-1a4m.onrender.com/api/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, collegeEmail, qrCode }),
+        }
+      );
+
+      if (!emailResponse.ok) {
+        throw new Error("Failed to send email.");
+      }
+    } catch (error) {
+      setError("Failed to send QR code via email. Please try again later.");
     }
   };
 
