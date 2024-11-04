@@ -12,7 +12,7 @@ function PasswordPage({ onVerify }) {
   const navigate = useNavigate();
 
   const handlePasswordSubmit = () => {
-    const correctPassword = process.env.SCAN_PASSWORD; // Replace with your desired password
+    const correctPassword = process.env.REACT_APP_PASSWORD; // Replace with your desired password
     if (password === correctPassword) {
       onVerify();
       navigate('/scan');
