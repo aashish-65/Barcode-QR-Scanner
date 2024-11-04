@@ -23,21 +23,21 @@ function PasswordPage({ onVerify }) {
 
   return (
     <div className="password-page">
-      <div className="logo-section">
+      <div className="logo-section-password">
         <img
           src={CodeNESTIcon}
           alt="CodeNEST Logo"
-          className="club-icon-logo"
+          className="club-icon-logo-password"
         />
         <img
           src={CodeNESTTitle}
           alt="CodeNEST Title"
-          className="club-name-logo"
+          className="club-name-logo-password"
         />
         <img
           src={CodeNESTSlogan}
           alt="CodeNEST Slogan"
-          className="club-slogan-logo"
+          className="club-slogan-logo-password"
         />
       </div>
       <div className="password-form">
