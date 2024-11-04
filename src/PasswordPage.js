@@ -8,9 +8,7 @@ import CodeNESTIcon from "./assets/svg/icon.svg";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
   IconButton,
-  TextField,
   InputAdornment,
-  InputLabel,
   Input
 } from "@mui/material";
 
@@ -25,12 +23,16 @@ function PasswordPage({ onVerify }) {
   const navigate = useNavigate();
 
   const handlePasswordSubmit = () => {
-    const correctPassword = process.env.SCAN_PASSWORD; // Replace with your desired password
-    if (password === correctPassword) {
+    const correctPassword = process.env.REACT_APP_PASSWORD;
+    if (values.password === correctPassword) {
       onVerify();
       navigate("/scan");
     } else {
-      setError("Incorrect password. Please try again.");
+      setError("Incorrect password! Please try again.");
+
+      setTimeout(() => {
+        setError("");
+      }, 3000);
     }
   };
 
@@ -92,7 +94,7 @@ function PasswordPage({ onVerify }) {
           }
         />
         <button className="submit-button" onClick={handlePasswordSubmit}>Submit</button>
-        {error && <p>{error}</p>}
+        {error && <p id="error-message-password">{error}</p>}
       </div>
     </div>
   );
