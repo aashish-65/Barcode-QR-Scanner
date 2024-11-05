@@ -144,6 +144,20 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+.event-section {
+  padding: 20px; /* Padding around sections */
+  margin: 20px auto; /* Center the section */
+  max-width: 800px; /* Max width for readability */
+  background-color: #dcdcdc; /* White background for sections */
+  border-radius: 8px; /* Round corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.event-section p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+}
+
 h2 {
   color: #2a2a2a; /* Header color for sections */
 }

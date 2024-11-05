@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
-import QRScanner from './QRScanner';
-import Register from './Register';
-import Home from './Home';
-import PasswordPage from './PasswordPage';
-import './App.css';
-import NotFound from './NotFound';
-import Authorized from './Authorized';
-import Unauthorized from './Unauthorized';
-import RegistrationSuccess from './RegistrationSuccess';
+import React, { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  useNavigate,
+} from "react-router-dom";
+import QRScanner from "./QRScanner";
+import Register from "./Register";
+import Home from "./Home";
+import PasswordPage from "./PasswordPage";
+import "./App.css";
+import NotFound from "./NotFound";
+import Authorized from "./Authorized";
+import Unauthorized from "./Unauthorized";
+import RegistrationSuccess from "./RegistrationSuccess";
+import LogoMakingEvent from "./LogoMakingEvent";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
@@ -33,24 +40,55 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route 
-            path="/scan" 
-            element={
-              isPasswordVerified ? 
-                <QRScanner onAuthorized={handleAuthorization} /> : 
-                <Navigate to="/password" />
-            } 
-          />
-          <Route path="/register" element={<Register onRegistrationSuccess={handleRegistrationSuccess} />} />
-          <Route path="/password" element={<PasswordPage onVerify={() => setIsPasswordVerified(true)} />} />
-          <Route path="/authorized" element={isAuthorized ? <AuthorizedMessage userName={userName} /> : <Navigate to="/scan" />} />
-          <Route path="/unauthorized" element={isUnauthorized ? <UnauthorizedMessage /> : <Navigate to="/scan" />} />
           <Route
-          path="/registration-success/:name"
-          element={
-            isRegistered ? <RegistrationSuccessMessage /> : <Navigate to="/register" replace />
-          }
-        />
+            path="/scan"
+            element={
+              isPasswordVerified ? (
+                <QRScanner onAuthorized={handleAuthorization} />
+              ) : (
+                <Navigate to="/password" />
+              )
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <Register onRegistrationSuccess={handleRegistrationSuccess} />
+            }
+          />
+          <Route
+            path="/password"
+            element={
+              <PasswordPage onVerify={() => setIsPasswordVerified(true)} />
+            }
+          />
+          <Route
+            path="/authorized"
+            element={
+              isAuthorized ? (
+                <AuthorizedMessage userName={userName} />
+              ) : (
+                <Navigate to="/scan" />
+              )
+            }
+          />
+          <Route
+            path="/unauthorized"
+            element={
+              isUnauthorized ? <UnauthorizedMessage /> : <Navigate to="/scan" />
+            }
+          />
+          <Route
+            path="/registration-success/:name"
+            element={
+              isRegistered ? (
+                <RegistrationSuccessMessage />
+              ) : (
+                <Navigate to="/register" replace />
+              )
+            }
+          />
+          <Route path="/event/logo-making" element={<LogoMakingEvent />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
@@ -63,7 +101,7 @@ function AuthorizedMessage({ userName }) {
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/scan');
+      navigate("/scan");
     }, 3000);
 
     return () => clearTimeout(timer);

@@ -83,7 +83,7 @@ function Register({ onRegistrationSuccess }) {
         setTimeout(() => {
           onRegistrationSuccess(); // Update status in App.js
           navigate(`/registration-success/${formData.name}`);
-        }, 2000);
+        }, 1000);
 
         setFormData({
           name: "",

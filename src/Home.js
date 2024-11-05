@@ -24,16 +24,14 @@ function Home({ onNavigate }) {
         clearInterval(interval);
         setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (difference % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setCountdown((prev) => ({ ...prev, days, hours, minutes, seconds }));
+        setCountdown({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        });
       }
     }, 1000); // Update every second
 
@@ -43,6 +41,8 @@ function Home({ onNavigate }) {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
     <div className="home-container">
@@ -69,29 +69,44 @@ function Home({ onNavigate }) {
       </header>
 
       <nav className="navbar">
-        <div className={`hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div
+          className={`hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
         <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={handleLinkClick}>
+              About Us
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" onClick={handleLinkClick}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#events">Events</a>
+            <a href="#events" onClick={handleLinkClick}>
+              Events
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact" onClick={handleLinkClick}>
+              Contact Us
+            </a>
           </li>
           <li>
-            <Link to="/scan">Scan</Link>
+            <Link to="/scan" onClick={handleLinkClick}>
+              Scan
+            </Link>
           </li>
           <li>
-            <Link to="/register">Register</Link>
+            <Link to="/register" onClick={handleLinkClick}>
+              Register
+            </Link>
           </li>
         </ul>
       </nav>
@@ -124,10 +139,27 @@ function Home({ onNavigate }) {
 
       <section id="events" className="events-section">
         <h2>Upcoming Events</h2>
+        <section className="logo-making event-section">
+          <div className="event-overview">
+            <h3>📢 CodeNEST Logo Competition Overview</h3>
+            <p>
+              Join us in designing the official logo for CodeNEST, the Open
+              Source Development Club at NSHM Knowledge Campus, Durgapur.
+            </p>
+            <p>
+              <strong>Deadline:</strong> November 11, 2024
+            </p>
+            <p>Click on the details tab to learn more!</p>
+
+            <Link to="/event/logo-making">
+            <button>View Details</button>
+          </Link>
+          </div>
+        </section>
         <p>Join us for workshops, hackathons, and more!</p>
       </section>
 
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <h3>Contact Us</h3>
         <p>Email: contact@codenest.org</p>
         <p>Follow us on social media!</p>
