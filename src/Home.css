@@ -225,7 +225,7 @@ h2 {
 
 .countdown-timer span {
   font-size: 1.2rem;
-  margin: 0 5px;
+  margin: 5px;
   padding: 10px;
   border-radius: 5px;
   background-color: #222;
@@ -437,6 +437,10 @@ h2 {
   .navbar li {
     max-width: 370px;
   }
+
+  .vision-title {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -471,11 +475,19 @@ h2 {
     max-width: 300px;
     padding: 20px;
   }
+
+  .vision-title {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 400px) {
   .navbar li {
     max-width: 250px;
+  }
+
+  .vision-title {
+    font-size: 0.8rem;
   }
 }
 
