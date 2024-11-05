@@ -8,17 +8,24 @@ import './App.css';
 import NotFound from './NotFound';
 import Authorized from './Authorized';
 import Unauthorized from './Unauthorized';
+import RegistrationSuccess from './RegistrationSuccess';
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [isUnauthorized, setIsUnauthorized] = useState(false);
   const [userName, setUserName] = useState(null);
   const [isPasswordVerified, setIsPasswordVerified] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const handleAuthorization = (authorized, user = null) => {
     setIsAuthorized(authorized);
     setIsUnauthorized(!authorized);
     setUserName(user);
+  };
+
+  // Handler to update registration status
+  const handleRegistrationSuccess = () => {
+    setIsRegistered(true);
   };
 
   return (
@@ -34,10 +41,16 @@ function App() {
                 <Navigate to="/password" />
             } 
           />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register onRegistrationSuccess={handleRegistrationSuccess} />} />
           <Route path="/password" element={<PasswordPage onVerify={() => setIsPasswordVerified(true)} />} />
           <Route path="/authorized" element={isAuthorized ? <AuthorizedMessage userName={userName} /> : <Navigate to="/scan" />} />
           <Route path="/unauthorized" element={isUnauthorized ? <UnauthorizedMessage /> : <Navigate to="/scan" />} />
+          <Route
+          path="/registration-success/:name"
+          element={
+            isRegistered ? <RegistrationSuccessMessage /> : <Navigate to="/register" replace />
+          }
+        />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
@@ -62,6 +75,10 @@ function AuthorizedMessage({ userName }) {
 function UnauthorizedMessage() {
   const navigate = useNavigate();
   return <Unauthorized onNavigate={navigate} />;
+}
+
+function RegistrationSuccessMessage() {
+  return <RegistrationSuccess />;
 }
 
 export default App;

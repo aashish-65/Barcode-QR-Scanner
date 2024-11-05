@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";
-import QRCode from "qrcode"
+import QRCode from "qrcode";
 
-function Register() {
+function Register({ onRegistrationSuccess }) {
   const [formData, setFormData] = useState({
     name: "",
     collegeEmail: "",
@@ -80,6 +80,10 @@ function Register() {
 
         // Step 3: Send the email with the QR code
         await sendEmailWithQRCode(formData.name, formData.collegeEmail, qrCodeDataUrl);
+        setTimeout(() => {
+          onRegistrationSuccess(); // Update status in App.js
+          navigate(`/registration-success/${formData.name}`);
+        }, 2000);
 
         setFormData({
           name: "",
@@ -136,22 +140,22 @@ function Register() {
     <div className="register-container">
       {/* <h1 className="club-name-register">CodeNEST</h1> */}
       <div className="logo-section">
-          <img
-            src={CodeNESTIcon}
-            alt="CodeNEST Logo"
-            className="club-icon-logo"
-          />
-          <img
-            src={CodeNESTTitle}
-            alt="CodeNEST Logo"
-            className="club-name-logo"
-          />
-          <img
-            src={CodeNESTSlogan}
-            alt="CodeNEST Slogan"
-            className="club-slogan-logo"
-          />
-        </div>
+        <img
+          src={CodeNESTIcon}
+          alt="CodeNEST Logo"
+          className="club-icon-logo"
+        />
+        <img
+          src={CodeNESTTitle}
+          alt="CodeNEST Logo"
+          className="club-name-logo"
+        />
+        <img
+          src={CodeNESTSlogan}
+          alt="CodeNEST Slogan"
+          className="club-slogan-logo"
+        />
+      </div>
       <h2 className="register-title">Register</h2>
       {error && <p className="error-message">{error}</p>}
       {success && <p className="success-message">{success}</p>}
@@ -214,10 +218,7 @@ function Register() {
         />
         <button type="submit">Register</button>
       </form>
-      <button
-        className="back-button-register"
-        onClick={() => navigate('/')}
-      >
+      <button className="back-button-register" onClick={() => navigate("/")}>
         Back to Home
       </button>
     </div>
