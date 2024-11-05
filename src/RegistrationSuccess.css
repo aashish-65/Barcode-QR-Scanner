@@ -31,9 +31,12 @@
 .success-message-registration {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #636060; /* Light text for success message */
+  color: #e3dede; /* Light text for success message */
 }
 
+.registration-logo img {
+  filter: invert(50%);
+}
 /* .logo-section {
   text-align: center;
   margin: 20px 0;
@@ -80,7 +83,7 @@
 .user-name {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #dcdcdcac; /* Slightly lighter text for user name */
+  color: #f6f6f6; /* Slightly lighter text for user name */
 }
 
 .description {

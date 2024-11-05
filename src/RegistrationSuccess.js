@@ -6,14 +6,14 @@ import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";
 
-function RegistrationSuccess({ userName, onNavigate }) {
+function RegistrationSuccess() {
     const navigate = useNavigate();
     const { name } = useParams();
   return (
     <div className="registration-success-container">
       <div className="content-registration-success">
         <h2 className="success-message-registration">Registration Successful</h2>
-        <div className="logo-section">
+        <div className="logo-section registration-logo">
           <img
             src={CodeNESTIcon}
             alt="CodeNEST Logo"
