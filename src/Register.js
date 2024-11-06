@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Register.css";
+import "./styles/Register.css";
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";

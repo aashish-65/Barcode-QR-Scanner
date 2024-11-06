@@ -1,6 +1,6 @@
 // Authorized.js
 import React from 'react';
-import './Authorized.css';
+import './styles/Authorized.css';
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";

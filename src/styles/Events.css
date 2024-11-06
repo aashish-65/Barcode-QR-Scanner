@@ -1,0 +1,31 @@
+.event-section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-section p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+}
+
+.event-overview {
+  animation: fadeIn 1.2s ease;
+}
+
+.event-overview button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-overview button:hover {
+  background-color: #005fa3;
+}

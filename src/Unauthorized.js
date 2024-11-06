@@ -1,6 +1,6 @@
 // Unauthorized.js
 import React from 'react';
-import './Unauthorized.css';
+import './styles/Unauthorized.css';
 
 function Unauthorized({ onNavigate }) {
   return (

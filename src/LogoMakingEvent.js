@@ -1,6 +1,6 @@
 // LogoMakingEvent.js
 import React from "react";
-import "./LogoMakingEvent.css";
+import "./styles/LogoMakingEvent.css";
 import banner from "./assets/images/logo-making-banner.jpg"; // Make sure the banner image path is correct
 
 function LogoMakingEvent() {

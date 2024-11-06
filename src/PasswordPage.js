@@ -1,7 +1,7 @@
 // PasswordPage.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./PasswordPage.css";
+import "./styles/PasswordPage.css";
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";

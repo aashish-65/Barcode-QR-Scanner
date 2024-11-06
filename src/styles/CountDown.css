@@ -1,0 +1,32 @@
+.countdown-section {
+  text-align: center; /* Center the countdown section */
+  padding: 20px;
+  margin: 20px auto; /* Center the section */
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 1.3s ease;
+}
+
+.countdown-timer {
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+.countdown-timer span {
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  display: inline-block;
+  animation: pulse 2s ease infinite;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .countdown-timer {
+    font-size: 1.2em;
+  }
+}

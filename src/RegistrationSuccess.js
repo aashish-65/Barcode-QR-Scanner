@@ -1,7 +1,7 @@
 // RegistrationSuccess.js
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './RegistrationSuccess.css';
+import './styles/RegistrationSuccess.css';
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";

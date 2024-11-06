@@ -10,12 +10,12 @@ import QRScanner from "./QRScanner";
 import Register from "./Register";
 import Home from "./Home";
 import PasswordPage from "./PasswordPage";
-import "./App.css";
 import NotFound from "./NotFound";
 import Authorized from "./Authorized";
 import Unauthorized from "./Unauthorized";
 import RegistrationSuccess from "./RegistrationSuccess";
 import LogoMakingEvent from "./LogoMakingEvent";
+import "./styles/App.css";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
