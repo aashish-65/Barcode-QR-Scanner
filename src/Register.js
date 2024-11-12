@@ -81,7 +81,7 @@ function Register({ onRegistrationSuccess }) {
         // Generate the QR code with token
         // const qrCodeDataUrl = await QRCode.toDataURL(token);
         const qrResponse = await fetch(
-          `http://localhost:5000/api/qr-generate/${token}`
+          `https://registrationsystem-1a4m.onrender.com/api/qr-generate/${token}`
         );
         
         if (!qrResponse.ok) {
