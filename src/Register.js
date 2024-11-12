@@ -75,10 +75,13 @@ function Register({ onRegistrationSuccess }) {
         setSuccess("Registration successful!");
         setError("");
 
-        // Step 2: Generate the QR code with collegeId
-        const qrCodeDataUrl = await QRCode.toDataURL(formData.collegeId);
+        const responseData = await response.json();
+      const { token } = responseData;
 
-        // Step 3: Send the email with the QR code
+        // Generate the QR code with token
+        const qrCodeDataUrl = await QRCode.toDataURL(token);
+
+        // Send the email with the QR code
         await sendEmailWithQRCode(formData.name, formData.collegeEmail, qrCodeDataUrl);
         setTimeout(() => {
           onRegistrationSuccess(); // Update status in App.js

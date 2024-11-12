@@ -10,15 +10,27 @@ function QRScanner({ onAuthorized }) {
 
   const handleScan = async (error, result) => {
     if (result) {
-      const id = result.text;
+      // const id = result.text;
+      const encryptToken = result.text;
       setLoading(true);
       setError(null);
 
       try {
-        const response = await fetch(`https://registrationsystem-1a4m.onrender.com/api/users/${id}`);
+        // const response = await fetch(`https://registrationsystem-1a4m.onrender.com/api/users/${id}`);
+        // const data = await response.json();
+
+        // if (response.ok) {
+        //   onAuthorized(true, data.user.name);
+        //   navigate('/authorized', { state: { userName: data.user.name } });
+        // } else {
+        //   onAuthorized(false);
+        //   navigate('/unauthorized');
+        // }
+
+        const response = await fetch(`https://registrationsystem-1a4m.onrender.com/api/users/verify/${encryptToken}`);
         const data = await response.json();
 
-        if (response.ok) {
+        if (data.message === 'User checked in successfully') {
           onAuthorized(true, data.user.name);
           navigate('/authorized', { state: { userName: data.user.name } });
         } else {
