@@ -4,7 +4,7 @@ import "./styles/Register.css";
 import CodeNESTTitle from "./assets/svg/CodeNESTTitle.svg";
 import CodeNESTSlogan from "./assets/svg/Slogan.svg";
 import CodeNESTIcon from "./assets/svg/icon.svg";
-import QRCode from "qrcode";
+// import QRCode from "qrcode";
 
 function Register({ onRegistrationSuccess }) {
   const [formData, setFormData] = useState({
@@ -76,13 +76,25 @@ function Register({ onRegistrationSuccess }) {
         setError("");
 
         const responseData = await response.json();
-      const { token } = responseData;
+        const { token } = responseData;
 
         // Generate the QR code with token
-        const qrCodeDataUrl = await QRCode.toDataURL(token);
+        // const qrCodeDataUrl = await QRCode.toDataURL(token);
+        const qrResponse = await fetch(
+          `http://localhost:5000/api/qr-generate/${token}`
+        );
+        
+        if (!qrResponse.ok) {
+          throw new Error("QR code generation failed.");
+        }
 
+        const { qrCode: qrCodeDataUrl } = await qrResponse.json();
         // Send the email with the QR code
-        await sendEmailWithQRCode(formData.name, formData.collegeEmail, qrCodeDataUrl);
+        await sendEmailWithQRCode(
+          formData.name,
+          formData.collegeEmail,
+          qrCodeDataUrl
+        );
         setTimeout(() => {
           onRegistrationSuccess(); // Update status in App.js
           navigate(`/registration-success/${formData.name}`);
