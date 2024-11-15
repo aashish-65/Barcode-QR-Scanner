@@ -15,7 +15,6 @@ const Events = () => {
           <p>
             <strong>Deadline:</strong> November 13, 2024
           </p>
-          <p>Click on the details tab to learn more!</p>
 
           <Link to="/event/logo-making">
             <button>View Details</button>

@@ -42,7 +42,7 @@ const teamMembers = [
     name: 'Arindam Ray',
     designation: 'AI-Blockchain Community Moderator',
     image: ArindamRayImg,
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/arindam-ray-821785263',
   },
   {
     name: 'Atique Ahmed',

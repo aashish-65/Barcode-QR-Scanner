@@ -75,26 +75,26 @@ function Register({ onRegistrationSuccess }) {
         setSuccess("Registration successful!");
         setError("");
 
-        const responseData = await response.json();
-        const { token } = responseData;
+        // const responseData = await response.json();
+        // const { token } = responseData;
 
         // Generate the QR code with token
         // const qrCodeDataUrl = await QRCode.toDataURL(token);
-        const qrResponse = await fetch(
-          `https://registrationsystem-1a4m.onrender.com/api/qr-generate/${token}`
-        );
+        // const qrResponse = await fetch(
+        //   `https://registrationsystem-1a4m.onrender.com/api/qr-generate/${token}`
+        // );
         
-        if (!qrResponse.ok) {
-          throw new Error("QR code generation failed.");
-        }
+        // if (!qrResponse.ok) {
+        //   throw new Error("QR code generation failed.");
+        // }
 
-        const { qrCode: qrCodeDataUrl } = await qrResponse.json();
+        // const { qrCode: qrCodeDataUrl } = await qrResponse.json();
         // Send the email with the QR code
-        await sendEmailWithQRCode(
-          formData.name,
-          formData.collegeEmail,
-          qrCodeDataUrl
-        );
+        // await sendEmailWithQRCode(
+        //   formData.name,
+        //   formData.collegeEmail,
+        //   qrCodeDataUrl
+        // );
         setTimeout(() => {
           onRegistrationSuccess(); // Update status in App.js
           navigate(`/registration-success/${formData.name}`);
@@ -119,26 +119,26 @@ function Register({ onRegistrationSuccess }) {
   };
 
   // Function to send email with QR code
-  const sendEmailWithQRCode = async (name, collegeEmail, qrCode) => {
-    try {
-      const emailResponse = await fetch(
-        "https://registrationsystem-1a4m.onrender.com/api/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, collegeEmail, qrCode }),
-        }
-      );
+  // const sendEmailWithQRCode = async (name, collegeEmail, qrCode) => {
+  //   try {
+  //     const emailResponse = await fetch(
+  //       "https://registrationsystem-1a4m.onrender.com/api/send-email",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({ name, collegeEmail, qrCode }),
+  //       }
+  //     );
 
-      if (!emailResponse.ok) {
-        throw new Error("Failed to send email.");
-      }
-    } catch (error) {
-      setError("Failed to send QR code via email. Please try again later.");
-    }
-  };
+  //     if (!emailResponse.ok) {
+  //       throw new Error("Failed to send email.");
+  //     }
+  //   } catch (error) {
+  //     setError("Failed to send QR code via email. Please try again later.");
+  //   }
+  // };
 
   // Clear success or error message after 5 seconds
   useEffect(() => {

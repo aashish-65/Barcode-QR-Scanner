@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import ronyImg from "../assets/organizers/Rony.jpg"
+import ronyImg from "../assets/organizers/Rony2.jpg"
 import SoumadityaImg from "../assets/organizers/Soumaditya.jpg";
 import AashishImg from "../assets/organizers/AashishPrasad.png";
 import "../styles/Organizers.css";
