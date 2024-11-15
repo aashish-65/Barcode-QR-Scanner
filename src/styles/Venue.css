@@ -1,0 +1,83 @@
+/* Venue Section */
+.venue-section {
+  padding: 60px 20px;
+  text-align: center;
+  /* background-color: #f8f8f8; */
+}
+
+.venue-section h2 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Image Container with Fade-In and Fade-Out Effects */
+.venue-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #ddd; /* Fallback color */
+}
+
+.venue-image-fade {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeEffect 1.5s ease-in-out forwards;
+  transition: opacity 1.5s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Fade Animation */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Map Container */
+.venue-map {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.venue-map iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .venue-section h2 {
+    font-size: 2rem;
+  }
+
+  .venue-image-container {
+    height: 300px;
+  }
+
+  .venue-map {
+    height: 250px;
+  }
+}

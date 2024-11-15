@@ -1,0 +1,110 @@
+.teams-section {
+  text-align: center;
+  padding: 50px 20px;
+  /* background-color: #f9f9f9; */
+}
+
+.teams-section h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.team-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.team-cards {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  width: max-content; /* Prevents cards from being compressed */
+}
+
+.team-card {
+  display: inline-block;
+  width: 200px; /* Fixed width */
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-designation {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scrolls the entire width of the container */
+  }
+}
+
+.team-scroll-container:hover .team-cards {
+  animation-play-state: paused;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .teams-section {
+    max-width: 700px;
+  }
+  .team-card {
+    width: 180px; /* Slightly smaller on medium screens */
+  }
+}
+
+@media (max-width: 700px) {
+  .teams-section {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .teams-section {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teams-section {
+    max-width: 380px;
+  }
+
+  .teams-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .team-card {
+    width: 160px; /* Smaller cards for mobile */
+  }
+}

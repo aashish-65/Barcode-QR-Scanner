@@ -1,0 +1,144 @@
+/* Overall section styling */
+.speakers-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+  }
+  
+  /* Section heading */
+  .speakers-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  /* Card container to manage layout */
+  .speakers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  /* Individual speaker card styling */
+  .speaker-card {
+    position: relative;
+    width: 240px;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #dbe4f0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add hover effect to the card */
+  .speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .speakers-section h3 {
+    font-size: 2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  /* Speaker photo styling */
+  .speaker-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border: 3px solid #4e5efb;
+  }
+  
+  /* Speaker name and designation */
+  .speaker-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .speaker-designation {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  /* Social media icons container */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Icon styling */
+  .social-icons a {
+    color: #555;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #4e5efb;
+    transform: scale(1.1);
+  }
+
+  /* Responsive styling */
+@media (max-width: 768px) {
+    .speakers-container {
+      gap: 16px;
+    }
+  
+    .speaker-card {
+      width: 200px;
+      padding: 15px;
+    }
+  
+    .speaker-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .speaker-designation {
+      font-size: 0.85rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .speakers-section h2 {
+      font-size: 2.2rem;
+    }
+  
+    .speakers-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .speaker-card {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .speaker-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .speaker-designation {
+      font-size: 0.9rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.5rem;
+    }
+  }
+  

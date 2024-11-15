@@ -20,7 +20,7 @@ function LogoMakingEvent() {
         <div className="event-info">
           <div className="event-item">
             <h2>🗓 Deadline</h2>
-            <p>Submit your design by <strong>November 11, 2024</strong>.</p>
+            <p>Submit your design by <strong>November 13, 2024</strong>.</p>
           </div>
 
           <div className="event-item">

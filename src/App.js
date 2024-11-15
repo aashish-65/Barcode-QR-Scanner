@@ -15,6 +15,7 @@ import Authorized from "./Authorized";
 import Unauthorized from "./Unauthorized";
 import RegistrationSuccess from "./RegistrationSuccess";
 import LogoMakingEvent from "./LogoMakingEvent";
+import LaunchEventDetails from "./LaunchEventDetails";
 import "./styles/App.css";
 
 function App() {
@@ -89,6 +90,9 @@ function App() {
             }
           />
           <Route path="/event/logo-making" element={<LogoMakingEvent />} />
+
+          <Route path="/event/launch-event-details" element={<LaunchEventDetails />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

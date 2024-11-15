@@ -38,9 +38,10 @@
   line-height: 0.7;
 }
 
-.register-button {
+.register-button, .join-button {
   margin-top: 20px;
   padding: 10px 20px;
+  margin: 5px;
   font-size: 18px;
   font-weight: bold;
   /* color: #fff; */

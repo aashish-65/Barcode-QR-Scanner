@@ -1,0 +1,139 @@
+/* General styling for the event details container */
+.launch-event-details {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: transform 0.3s;
+}
+
+.launch-event-details:hover {
+  transform: translateY(-5px);
+}
+
+.launch-event-details h2 {
+  font-size: 2.5em;
+  color: #007acc;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-poster {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.launch-event-details h3 {
+  font-size: 1.8em;
+  color: #005fa3;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #005fa3;
+  padding-bottom: 5px;
+}
+
+.launch-event-details p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Styling for the event highlights section */
+.event-highlight ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-highlight ul li {
+  font-size: 1.1em;
+  background: rgba(0, 122, 204, 0.1);
+  color: #005fa3;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.event-highlight ul li:hover {
+  background: rgba(0, 122, 204, 0.2);
+}
+
+/* Styling for collaboration and community partner sections */
+.collaboration-partners, .community-partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 30px;
+}
+
+.collaboration-partners img, .community-partner img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collaboration-partners img:hover, .community-partner img:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the contact email */
+.email-contact {
+  text-align: center;
+  font-size: 1.3em;
+  color: #333;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.email-contact a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-contact a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+/* Additional styling for hover effects and transitions */
+.launch-event-details * {
+  transition: all 0.3s ease;
+}
+
+.launch-event-details h3:hover {
+  color: #007acc;
+  border-bottom-color: #007acc;
+}
+
+/* Subtle animations */
+.launch-event-details h2, .launch-event-details h3, .launch-event-details p, .event-highlight ul li, .email-contact {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

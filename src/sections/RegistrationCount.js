@@ -26,6 +26,9 @@ const RegistrationCount = () => {
   const handleRegisterClick = () => {
     navigate("/register");
   };
+  const handleJoinClick = () => {
+    window.open("https://join.slack.com/t/codenestopens-znm8263/shared_invite/zt-2uamf05me-xIFSDdaAgq5QVLcMpj2VIQ", "_blank");
+  };
 
   return (
     <section className="registration-count">
@@ -51,6 +54,9 @@ const RegistrationCount = () => {
 
       <button className="register-button" onClick={handleRegisterClick}>
         Register Now
+      </button>
+      <button className="join-button" onClick={handleJoinClick}>
+        Join Our Official Group
       </button>
     </section>
   );
