@@ -19,7 +19,7 @@
     margin: 30px 0;
   }
   
-  .collaboration-section h3,
+  .collaboration-section h3, .project-hosts-section h3,
   .community-partners-section h3 {
     font-size: 2rem;
     color: #7f8c8d;
