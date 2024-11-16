@@ -1,0 +1,97 @@
+.chief-mentor-section {
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chief-mentor-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .mentor-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .mentor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mentor-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #67727c;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+  
+  .mentor-details {
+    text-align: left;
+    flex: 1;
+    color: #222;
+  }
+  
+  .mentor-details h3 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .mentor-designation {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .mentor-message {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mentor-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .mentor-photo {
+      margin: 0 auto 20px;
+    }
+  
+    .mentor-details {
+      text-align: center;
+    }
+  
+    .mentor-details h3 {
+      font-size: 1.6em;
+    }
+  
+    .mentor-designation {
+      font-size: 1.1em;
+    }
+  
+    .mentor-message {
+      font-size: 1em;
+    }
+  }
+  

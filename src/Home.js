@@ -14,6 +14,8 @@ import Teams from "./sections/Teams";
 import Venue from "./sections/Venue";
 import UpcomingEvents from "./sections/UpcomingEvents";
 import Sponsors from "./sections/Sponsors";
+import ChiefMentor from "./sections/ChiefMentor";
+import FacultyCoordinator from "./sections/FacultyCoordinator";
 
 function Home() {
   return (
@@ -27,6 +29,8 @@ function Home() {
       <UpcomingEvents />
       <PastEvents />
       <Speakers />
+      <ChiefMentor />
+      <FacultyCoordinator />
       <Organizers />
       <Teams />
       <Venue />

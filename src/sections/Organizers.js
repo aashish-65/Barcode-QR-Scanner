@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import ronyImg from "../assets/organizers/Rony2.jpg"
 import SoumadityaImg from "../assets/organizers/Soumaditya.jpg";
-import AashishImg from "../assets/organizers/AashishPrasad.png";
+import AashishImg from "../assets/organizers/AashishPrasad.jpg";
 import "../styles/Organizers.css";
 
 // Sample data for organizers
@@ -16,6 +16,7 @@ const organizers = [
     socialMedia: {
       linkedin: " https://www.linkedin.com/in/soumaditya-pal-109029309/",
       github: "https://github.com/palsoumaditya",
+      instagram: "https://www.instagram.com/soumaditya.pal?igsh=OHl3YnJlbWZ2N2Zs",
     },
   },
   {
@@ -26,6 +27,7 @@ const organizers = [
     socialMedia: {
       linkedin: "https://www.linkedin.com/in/mowazzem-uddin-ahmed-96689b276",
       github: "https://github.com/Rony-2004",
+      instagram: "https://www.instagram.com/rony.op_?igsh=MWdlOG92bDNwZXpvNQ==",
     },
   },
   {
@@ -36,6 +38,7 @@ const organizers = [
     socialMedia: {
       linkedin: " https://www.linkedin.com/in/aashishprasad65",
       github: "https://github.com/aashish-65",
+      instagram: "https://www.instagram.com/aashishprasad65?igsh=dzk0cmx1b2ViY3hu ",
     },
   },
 
@@ -81,7 +84,7 @@ const Organizers = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-instagram"></i>
+                  <FontAwesomeIcon icon={faInstagram} size="lg" />
                 </a>
               )}
               {/* Add more social icons as needed */}

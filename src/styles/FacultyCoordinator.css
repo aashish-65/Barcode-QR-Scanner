@@ -1,0 +1,110 @@
+.faculty-section {
+    padding: 50px 20px;
+    /* background-color: #f9f9f9; Subtle background color for contrast */
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  .faculty-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px; /* Adds modern typography spacing */
+  }
+  
+  .faculty-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .faculty-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6; /* Clean card background */
+    border-radius: 15px; /* Softer corners */
+    padding: 20px;
+    width: 280px; /* Uniform width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    text-decoration: none;
+    color: #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faculty-card:hover {
+    transform: translateY(-8px); /* More noticeable hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper hover shadow */
+  }
+  
+  .faculty-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #0073e6; /* Subtle border to highlight photo */
+  }
+  
+  .faculty-details h3 {
+    font-size: 1.6em;
+    color: #222;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .faculty-designation {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .faculty-message {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .faculty-card {
+      width: 100%;
+      padding: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for mobile */
+    }
+  
+    .faculty-photo {
+      width: 130px;
+      height: 130px;
+    }
+  
+    .faculty-details h3 {
+      font-size: 1.4em;
+    }
+  
+    .faculty-designation {
+      font-size: 1em;
+    }
+  
+    .faculty-message {
+      font-size: 0.95em;
+    }
+  }
+  
+  /* Additional Styling */
+  .faculty-container::after {
+    content: ""; 
+    display: block; 
+    flex-basis: 100%; 
+    height: 0; 
+    order: 1; 
+    visibility: hidden; 
+  }
+  

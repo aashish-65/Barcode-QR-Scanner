@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
+import Photo1Img from "../assets/Venue/Photo1.jpg";
 import Photo2Img from "../assets/Venue/Photo2.jpg";
+import Photo3Img from "../assets/Venue/Photo3.jpg";
+import Photo4Img from "../assets/Venue/Photo4.jpg";
 import "../styles/Venue.css";
 
 const venueImages = [
+  Photo1Img,
+  Photo2Img,
+  Photo3Img,
+  Photo4Img,
   "https://www.nshm.com/computinganalytics/durgapur/images/about.png",
-  "https://media.licdn.com/dms/image/v2/D4D16AQFjF9wv1ZbhbQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1661408731463?e=2147483647&v=beta&t=BTBHdOWhb4AsD8QQvnOotRwHBI3gNECRRXJBPVQy8QQ",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX4H680F8YpSQlibOVZ7X5Z4jzm7Fok26CyA&s",
-  Photo2Img // Add as many images as you like
 ];
 const Venue = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

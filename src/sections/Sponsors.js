@@ -2,10 +2,12 @@ import React from 'react';
 import GitHubImg from "../assets/Sponsors&CommunityPartner/GitHub.jpg";
 import GDGImg from "../assets/Sponsors&CommunityPartner/GDG.jpg";
 import CodingNinga from "../assets/Sponsors&CommunityPartner/CodingNinga.jpg";
+import OSSDC from "../assets/Sponsors&CommunityPartner/OSSDC.jpg";
 import '../styles/Sponsors.css';
 
 const collaborators = [
   { name: 'Coding Ninjas', logo: CodingNinga, website: 'https://www.codingninjas.com/' },
+  { name: 'Open Source Student Development Club', logo: OSSDC, website: 'https://www.codingninjas.com/' }
 ];
 
 const projectHosts = [

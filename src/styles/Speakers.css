@@ -49,8 +49,8 @@
 
   /* Speaker photo styling */
   .speaker-photo {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto 12px;
@@ -101,7 +101,7 @@
     }
   
     .speaker-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
   
     .speaker-designation {
@@ -130,7 +130,7 @@
     }
   
     .speaker-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   
     .speaker-designation {

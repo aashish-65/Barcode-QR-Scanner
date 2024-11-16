@@ -5,6 +5,7 @@ import VivekGhoshImg from "../assets/team-members/VivekGhosh.png";
 import SumitLahaImg from "../assets/team-members/SumitLaha.jpg";
 import ArindamRayImg from "../assets/team-members/ArindamRay.jpg";
 import ShuvodipHazraImg from "../assets/team-members/ShuvodipHazra.jpg";
+// import NachiketaImg from "../assets/team-members/Nachiketa.jpg";
 import '../styles/Teams.css';
 
 const teamMembers = [
