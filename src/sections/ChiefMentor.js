@@ -1,5 +1,5 @@
 import React from "react";
-import MentorImg from "../assets/ChiefMentor/BijoyMandal.png";
+import MentorImg from "../assets/ChiefMentor/BijoyMandal.jpg";
 import "../styles/ChiefMentor.css";
 
 const ChiefMentor = () => {
