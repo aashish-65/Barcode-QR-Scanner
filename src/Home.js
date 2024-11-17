@@ -16,6 +16,7 @@ import UpcomingEvents from "./sections/UpcomingEvents";
 import Sponsors from "./sections/Sponsors";
 import ChiefMentor from "./sections/ChiefMentor";
 import FacultyCoordinator from "./sections/FacultyCoordinator";
+import Graph from "./sections/Graph";
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
       <Navbar />
       <CountDown />
       <RegistrationCount />
+      <Graph />
       <AboutUs />
       <OurVisions />
       <UpcomingEvents />
