@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +16,7 @@ import Unauthorized from "./Unauthorized";
 import RegistrationSuccess from "./RegistrationSuccess";
 import LogoMakingEvent from "./LogoMakingEvent";
 import LaunchEventDetails from "./LaunchEventDetails";
+import Preloader from "./Preloader";
 import "./styles/App.css";
 
 function App() {
@@ -24,6 +25,12 @@ function App() {
   const [userName, setUserName] = useState(null);
   const [isPasswordVerified, setIsPasswordVerified] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(true); // Preloader state
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsPreloading(false), 3500); // Preloader duration
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleAuthorization = (authorized, user = null) => {
     setIsAuthorized(authorized);
@@ -35,6 +42,10 @@ function App() {
   const handleRegistrationSuccess = () => {
     setIsRegistered(true);
   };
+
+  if (isPreloading) {
+    return <Preloader />; // Show Preloader if preloading
+  }
 
   return (
     <Router>

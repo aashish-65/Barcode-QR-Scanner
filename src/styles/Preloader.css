@@ -1,0 +1,143 @@
+/* Preloader Container */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  /* Background Animation */
+  .background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #1d3557, #457b9d, #a8dadc, #f4a261);
+    background-size: 400% 400%;
+    animation: gradient-shift 10s infinite;
+    z-index: 0;
+    opacity: 0.7;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    z-index: 1;
+    text-align: center;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    animation: fade-in 1s ease-in-out, pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
+    /* filter: invert(50%); */
+  }
+  
+  /* Text Animation */
+  .text-animation {
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* CodeNEST Letter Animation */
+  .line {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .line .letter {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    animation: bounce 1.5s infinite;
+    animation-delay: calc(var(--delay) * 0.1s);
+  }
+  
+  .line .letter:nth-child(1) { --delay: 1; }
+  .line .letter:nth-child(2) { --delay: 2; }
+  .line .letter:nth-child(3) { --delay: 3; }
+  .line .letter:nth-child(4) { --delay: 4; }
+  .line .letter:nth-child(5) { --delay: 5; }
+  .line .letter:nth-child(6) { --delay: 6; }
+  .line .letter:nth-child(7) { --delay: 7; }
+  .line .letter:nth-child(8) { --delay: 8; }
+  
+  /* Tagline Animation */
+  .tagline {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #f4f4f4;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+  }
+  
+  .tagline-first {
+    animation-delay: 1s;
+    font-size: 1.6rem;
+    color: #ffcc70;
+  }
+  
+  .tagline-second {
+    animation-delay: 2s;
+    font-size: 1.4rem;
+    color: #48dbfb;
+  }
+  
+  /* Animations */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
