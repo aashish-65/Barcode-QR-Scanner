@@ -1,5 +1,5 @@
 .graph-section {
-    padding: 40px 20px;
+    padding: 20px 20px;
     /* background-color: #f4f4f4; */
     text-align: center;
   }
@@ -21,8 +21,14 @@
     }
   }
   
+  @media (max-width: 576px) {
+    #chartdiv {
+      height: 380px; /* Adjust height for even smaller screens */
+    }
+  }
+  
   @media (max-width: 440px) {
     #chartdiv {
-      height: 350px; /* Adjust height for even smaller screens */
+      height: 370px; /* Adjust height for even smaller screens */
     }
   }
