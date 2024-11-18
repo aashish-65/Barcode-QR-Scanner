@@ -5,7 +5,7 @@ import "../styles/ChiefMentor.css";
 const ChiefMentor = () => {
   return (
     <section className="chief-mentor-section">
-      <h2>Chief Mentor</h2>
+      <h2>Mentor</h2>
       <a
         href="https://www.linkedin.com/in/dr-bijoy-mandal-b9a4a6124"
         target="_blank"
