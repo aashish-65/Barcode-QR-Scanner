@@ -18,10 +18,10 @@ const Graph = () => {
 
     // Add data
     chart.data = [
-      { department: "CSE", count: 216 },
-      { department: "AI", count: 35 },
+      { department: "CSE", count: 222 },
+      { department: "AI", count: 44 },
       { department: "BCA", count: 20 },
-      { department: "DS", count: 15 },
+      { department: "DS", count: 16 },
       { department: "ECE", count: 10 },
       { department: "ME", count: 1 },
       { department: "MCA", count: 1 },
