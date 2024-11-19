@@ -18,14 +18,15 @@ const Graph = () => {
 
     // Add data
     chart.data = [
-      { department: "CSE", count: 222 },
-      { department: "AI", count: 44 },
-      { department: "BCA", count: 20 },
-      { department: "DS", count: 16 },
-      { department: "ECE", count: 10 },
+      { department: "CSE", count: 250 },
+      { department: "AI", count: 48 },
+      { department: "BCA", count: 25 },
+      { department: "DS", count: 20 },
+      { department: "ECE", count: 11 },
       { department: "ME", count: 1 },
       { department: "MCA", count: 1 },
       { department: "BBA", count: 1 },
+      { department: "B.OPTM", count: 4 },
     ];
 
     // Add series
