@@ -1,7 +1,7 @@
 import React from 'react';
 import GitHubImg from "../assets/Sponsors&CommunityPartner/GitHub.jpg";
 import GDGImg from "../assets/Sponsors&CommunityPartner/GDG.jpg";
-import CodingNinga from "../assets/Sponsors&CommunityPartner/CodingNinga.jpg";
+// import CodingNinga from "../assets/Sponsors&CommunityPartner/CodingNinga.jpg";
 import OSSDC from "../assets/Sponsors&CommunityPartner/OSSDC.jpg";
 import '../styles/Sponsors.css';
 
