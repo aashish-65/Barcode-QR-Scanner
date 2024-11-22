@@ -6,7 +6,6 @@ import OSSDC from "../assets/Sponsors&CommunityPartner/OSSDC.jpg";
 import '../styles/Sponsors.css';
 
 const collaborators = [
-  { name: 'Coding Ninjas', logo: CodingNinga, website: 'https://www.codingninjas.com/' },
   { name: 'Open Source Student Development Club', logo: OSSDC, website: 'https://ossdc.in/' }
 ];
 

@@ -27,7 +27,7 @@ const Venue = () => {
 
   return (
     <section className="venue-section">
-      <h2>Event Venue</h2>
+      <h2>Campus</h2>
       <div className="venue-image-container">
         <img
           src={venueImages[currentImageIndex]}

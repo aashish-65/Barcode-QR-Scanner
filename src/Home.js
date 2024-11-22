@@ -23,14 +23,14 @@ function Home() {
     <div className="home-container">
       <Header />
       <Navbar />
-      <CountDown />
+      {/* <CountDown /> */}
       <RegistrationCount />
       <Graph />
       <AboutUs />
       <OurVisions />
       <UpcomingEvents />
       <PastEvents />
-      <Speakers />
+      {/* <Speakers /> */}
       <ChiefMentor />
       <FacultyCoordinator />
       <Organizers />

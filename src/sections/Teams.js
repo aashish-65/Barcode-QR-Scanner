@@ -47,7 +47,7 @@ const teamMembers = [
   },
   {
     name: 'Atique Ahmed',
-    designation: 'Content Lead',
+    designation: 'Content Lead, IoT Lead',
     image: 'https://media.licdn.com/dms/image/v2/D5603AQF4JZGwmiK7hg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730285705117?e=1736985600&v=beta&t=bQyCBkRInUmhMSl9-AJ7WZZ6MlwWVhjz6eLYRaxjU4k',
     linkedin: 'https://www.linkedin.com/in/atique-ahmed-7590b8284',
   },
