@@ -5,6 +5,7 @@ import VivekGhoshImg from "../assets/team-members/VivekGhosh.png";
 import SumitLahaImg from "../assets/team-members/SumitLaha.jpg";
 import ArindamRayImg from "../assets/team-members/ArindamRay.jpg";
 import ShuvodipHazraImg from "../assets/team-members/ShuvodipHazra.jpg";
+import AtiqueAhmed from "../assets/team-members/AtiqueAhmed.jpg";
 // import NachiketaImg from "../assets/team-members/Nachiketa.jpg";
 import '../styles/Teams.css';
 
@@ -48,7 +49,7 @@ const teamMembers = [
   {
     name: 'Atique Ahmed',
     designation: 'Content Lead, IoT Lead',
-    image: 'https://media.licdn.com/dms/image/v2/D5603AQF4JZGwmiK7hg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730285705117?e=1736985600&v=beta&t=bQyCBkRInUmhMSl9-AJ7WZZ6MlwWVhjz6eLYRaxjU4k',
+    image: AtiqueAhmed,
     linkedin: 'https://www.linkedin.com/in/atique-ahmed-7590b8284',
   },
   {
