@@ -14,7 +14,6 @@ const projectHosts = [
 ];
 
 const communityPartners = [
-  { name: 'Google Developer Group Durgapur', logo: GDGImg, website: 'https://gdg.community.dev/gdg-durgapur/' },
 ];
 
 const Sponsors = () => {
