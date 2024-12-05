@@ -14,6 +14,7 @@ const projectHosts = [
 ];
 
 const communityPartners = [
+  { name: 'Google Developer Group Durgapur', logo: GDGImg, website: 'https://gdg.community.dev/gdg-durgapur/' },
 ];
 
 const Sponsors = () => {
@@ -57,7 +58,7 @@ const Sponsors = () => {
         </div>
       </div>
 
-      <div className="community-partners-section">
+      {/* <div className="community-partners-section">
         <h3>Community Partner</h3>
         <div className="sponsors-container">
           {communityPartners.map((partner, index) => (
@@ -73,7 +74,7 @@ const Sponsors = () => {
             </a>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
