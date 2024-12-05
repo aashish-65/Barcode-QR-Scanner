@@ -1,6 +1,6 @@
 import React from 'react';
 import GitHubImg from "../assets/Sponsors&CommunityPartner/GitHub.jpg";
-import GDGImg from "../assets/Sponsors&CommunityPartner/GDG.jpg";
+// import GDGImg from "../assets/Sponsors&CommunityPartner/GDG.jpg";
 // import CodingNinga from "../assets/Sponsors&CommunityPartner/CodingNinga.jpg";
 import OSSDC from "../assets/Sponsors&CommunityPartner/OSSDC.jpg";
 import '../styles/Sponsors.css';
@@ -13,9 +13,9 @@ const projectHosts = [
   { name: 'GitHub Education', logo: GitHubImg, website: 'https://github.com/education' },
 ];
 
-const communityPartners = [
-  { name: 'Google Developer Group Durgapur', logo: GDGImg, website: 'https://gdg.community.dev/gdg-durgapur/' },
-];
+// const communityPartners = [
+//   { name: 'Google Developer Group Durgapur', logo: GDGImg, website: 'https://gdg.community.dev/gdg-durgapur/' },
+// ];
 
 const Sponsors = () => {
   return (
