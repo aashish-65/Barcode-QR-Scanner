@@ -14,9 +14,9 @@ const ChiefMentor = () => {
       >
         <img src={MentorImg} alt="Chief Mentor" className="mentor-photo" />
         <div className="mentor-details">
-          <h3>Prof. Dr. Bijoy Kumar Mandal</h3>
+          <h3>Dr. Bijoy Kumar Mandal</h3>
           <p className="mentor-designation">
-            Professor, Computer Science and Engineering Department
+            Principal, Department of Computer Science and Engineering Department, NIET
           </p>
           <p className="mentor-message">
             "Guiding the team to achieve excellence and fostering a spirit of
