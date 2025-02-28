@@ -43,6 +43,11 @@ const UpcomingEvents = () => {
           <p>
             <strong>Location:</strong> NSHM Knowledge Campus, Durgapur
           </p>
+        <div className="event-ended-box">
+          <p className="event-ended">
+            <strong>EVENT ENDED</strong>
+          </p>
+          </div>
 
           {/* <Link to="/event/logo-making">
             <button>View Details</button>

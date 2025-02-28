@@ -29,3 +29,16 @@
 .event-overview button:hover {
   background-color: #005fa3;
 }
+
+.event-ended-box{
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.event-ended {
+  /* opacity: 0.5; */
+  /* color: red; */
+  
+}
