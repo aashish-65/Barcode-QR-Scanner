@@ -15,6 +15,7 @@ const UpcomingEvents = () => {
           <h3>
             📢 Building and Securing Full Stack Apps with Firebase & React
           </h3>
+          <img src="SeminarPoster.jpg" alt="poster" style={{width:"60%"}}/>
           <p>
             🎤 <strong>Speaker:</strong> Debajit Mallick 
           </p>
