@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-The **Barcode-QR-Scanner** is a web-based application designed for scanning barcodes and QR codes efficiently. This project is built using **React.js** and leverages modern web technologies to provide a seamless scanning experience. The application is optimized for performance, usability, and cross-device compatibility.
+The **Barcode-QR-Scanner** is a web-based application designed for scanning barcodes and QR codes efficiently. This project is built using **React.js** and leverages modern web technologies to provide a seamless scanning experience. The application is optimized for performance, usability, and cross-device compatibility. [Link to Backend](https://github.com/aashish-65/RegistrationSystem)
 
 ## **Table of Contents**
 
