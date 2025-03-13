@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SeminarPoster from "../assets/images/SeminarPoster.jpg";
 import "../styles/Events.css";
 const Events = () => {
   return (
@@ -42,7 +43,7 @@ const Events = () => {
           <h3>
             📢 Building and Securing Full Stack Apps with Firebase & React
           </h3>
-          <img src="SeminarPoster.jpg" alt="poster" style={{width:"60%"}}/>
+          <img src={SeminarPoster} alt="poster" style={{width:"60%"}}/>
           <p>
             🎤 <strong>Speaker:</strong> Debajit Mallick 
           </p>
