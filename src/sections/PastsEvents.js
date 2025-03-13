@@ -37,7 +37,7 @@ const Events = () => {
           </Link>
         </div>
       </section>
-      <section className="logo-making event-section">
+      <section className="event-section">
         <div className="event-overview">
           <h3>
             📢 Building and Securing Full Stack Apps with Firebase & React
