@@ -6,14 +6,14 @@ import SumitLahaImg from "../assets/team-members/SumitLaha.jpg";
 import ArindamRayImg from "../assets/team-members/ArindamRay.jpg";
 import ShuvodipHazraImg from "../assets/team-members/ShuvodipHazra.jpg";
 import AtiqueAhmed from "../assets/team-members/AtiqueAhmed.jpg";
-// import NachiketaImg from "../assets/team-members/Nachiketa.jpg";
+import NachiketaImg from "../assets/team-members/Nachiketa.jpg";
 import '../styles/Teams.css';
 
 const teamMembers = [
   {
     name: 'Nachiketa Pahari',
     designation: 'Web Lead & Design Lead',
-    image: 'https://media.licdn.com/dms/image/v2/D5603AQEVqM7GSE7y6A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1701323810214?e=1736985600&v=beta&t=oaYu32UJUj674dZiV9WkeaHcaWHBtZCj0KTR2aoMqGo',
+    image: NachiketaImg,
     linkedin: 'https://www.linkedin.com/in/nachiketa-pahari-6b1028257',
   },
   {
