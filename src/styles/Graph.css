@@ -1,34 +1,37 @@
+/* Graph */
 .graph-section {
-    padding: 20px 20px;
-    /* background-color: #f4f4f4; */
-    text-align: center;
-  }
-  
-  .graph-section h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-  }
+  padding: 40px 20px;
+  text-align: center;
+}
 
-  #chartdiv {
-    width: 100%;
-    height: 500px;
-  }
+.graph-section h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
 
-  @media (max-width: 768px) {
-    #chartdiv {
-      height: 400px; /* Adjust height for smaller screens */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    #chartdiv {
-      height: 380px; /* Adjust height for even smaller screens */
-    }
-  }
-  
-  @media (max-width: 440px) {
-    #chartdiv {
-      height: 370px; /* Adjust height for even smaller screens */
-    }
-  }
+.graph-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+/* Override amCharts watermark */
+#chartdiv > div > svg > g > g[opacity="0.4"] {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #chartdiv { height: 420px; }
+  .graph-section h2 { font-size: 1.6rem; }
+}
+
+@media (max-width: 576px) { #chartdiv { height: 380px; } }
+@media (max-width: 440px) { #chartdiv { height: 350px; } }

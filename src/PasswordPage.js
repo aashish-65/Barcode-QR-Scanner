@@ -73,7 +73,7 @@ function PasswordPage({ onVerify }) {
           className="club-slogan-logo-password"
         />
       </div>
-      <div className="password-form">
+      <form className="password-form" onSubmit={(e) => { e.preventDefault(); handlePasswordSubmit(); }}>
         <h2>Enter Password to Access Scan</h2>
         <Input
           id="password"
@@ -93,9 +93,9 @@ function PasswordPage({ onVerify }) {
             </InputAdornment>
           }
         />
-        <button className="submit-button" onClick={handlePasswordSubmit}>Submit</button>
+        <button className="submit-button" type="submit">Submit</button>
         {error && <p id="error-message-password">{error}</p>}
-      </div>
+      </form>
     </div>
   );
 }

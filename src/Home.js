@@ -1,4 +1,5 @@
 import React from "react";
+import PixelBlast from "./components/PixelBlast";
 import RegistrationCount from "./sections/RegistrationCount";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -19,8 +20,23 @@ import FacultyCoordinator from "./sections/FacultyCoordinator";
 import Graph from "./sections/Graph";
 
 function Home() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
   return (
     <div className="home-container">
+      <PixelBlast
+        variant="circle"
+        pixelSize={isMobile ? 4 : 7}
+        color="#7c3aed"
+        patternScale={isMobile ? 3 : 4}
+        patternDensity={isMobile ? 0.7 : 0.9}
+        enableRipples={true}
+        rippleSpeed={0.3}
+        rippleThickness={0.12}
+        rippleIntensityScale={1.2}
+        speed={0.4}
+        edgeFade={0.15}
+        transparent={true}
+      />
       <Header />
       <Navbar />
       {/* <CountDown /> */}

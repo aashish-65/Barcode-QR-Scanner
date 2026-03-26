@@ -1,142 +1,48 @@
-/* RegistrationSuccess.css */
-
+/* Registration Success */
 .registration-success-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
-  background: linear-gradient(
-    135deg,
-    #2a2a2a,
-    #111111
-  ); /* Dark gradient background */
-  color: #f6f6f6; /* Light text for contrast */
-  text-align: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
   padding: 20px;
-}
-
-.content-registration-success {
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(
-    246,
-    246,
-    246,
-    0.1
-  ); /* Semi-transparent light overlay */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-.success-message-registration {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #e3dede; /* Light text for success message */
-}
-
-.registration-logo img {
-  filter: invert(50%);
-}
-/* .logo-section {
   text-align: center;
-  margin: 20px 0;
-} */
-
-/* .club-icon-logo {
-  width: 40px;
-  height: auto;
-  margin: 0 auto 10px;
-  display: block;
-  opacity: 0.8;
-  transition: transform 0.3s ease;
-} */
-
-/* .club-icon-logo:hover {
-  transform: scale(1.1);
-} */
-
-/* .club-name-logo {
-  width: 180px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  transition: transform 0.3s ease;
-} */
-
-/* .club-name-logo:hover {
-  transform: scale(1.05);
-} */
-
-/* .club-slogan-logo {
-  width: 300px;
-  height: auto;
-  margin: 10px auto 0;
-  display: block;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
-} */
-
-/* .club-slogan-logo:hover {
-  transform: scale(1.05);
-} */
-
-.user-name {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #f6f6f6; /* Slightly lighter text for user name */
+  animation: fadeIn 0.8s ease;
 }
 
-.description {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #f6f6f6; /* Light description text */
-  font-family: 'Courier New', Courier, monospace;
+.registration-success-container h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #22c55e, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
 }
 
-.action-button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #dcdcdc; /* Light button background */
-  color: #2a2a2a; /* Dark button text */
+.registration-success-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.registration-success-container button,
+.registration-success-container a {
+  padding: 12px 28px;
+  background: var(--accent-gradient);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.action-button:hover {
-  background-color: #f6f6f6; /* Slightly lighter on hover */
-  transform: scale(1.05);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-  .success-message,
-  .user-name {
-    font-size: 2rem;
-  }
-
-  /* .club-icon-logo {
-    width: 30px;
-  } */
-
-  /* .club-name-logo {
-    width: 150px;
-  } */
-
-  /* .club-slogan-logo {
-    width: 260px;
-  } */
-
-  /* .logo-section {
-    margin: 15px 0;
-  } */
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .action-button {
-    font-size: 1rem;
-  }
+.registration-success-container button:hover,
+.registration-success-container a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }

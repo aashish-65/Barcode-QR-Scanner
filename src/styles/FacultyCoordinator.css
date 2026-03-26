@@ -1,110 +1,95 @@
+/* Faculty Coordinator */
 .faculty-section {
-    padding: 50px 20px;
-    /* background-color: #f9f9f9; Subtle background color for contrast */
-    font-family: "Arial", sans-serif;
-    text-align: center;
-  }
-  
-  .faculty-section h2 {
-    font-size: 2.5em;
-    color: #333;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    letter-spacing: 2px; /* Adds modern typography spacing */
-  }
-  
-  .faculty-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .faculty-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f6f6f6; /* Clean card background */
-    border-radius: 15px; /* Softer corners */
-    padding: 20px;
-    width: 280px; /* Uniform width */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
-    text-decoration: none;
-    color: #222;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .faculty-card:hover {
-    transform: translateY(-8px); /* More noticeable hover effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper hover shadow */
-  }
-  
-  .faculty-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #0073e6; /* Subtle border to highlight photo */
-  }
-  
-  .faculty-details h3 {
-    font-size: 1.6em;
-    color: #222;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .faculty-designation {
-    font-size: 1.1em;
-    color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
-    text-align: center;
-  }
-  
-  .faculty-message {
-    font-size: 1em;
-    color: #444;
-    line-height: 1.6;
-    text-align: center;
-    margin-bottom: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .faculty-card {
-      width: 100%;
-      padding: 15px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for mobile */
-    }
-  
-    .faculty-photo {
-      width: 130px;
-      height: 130px;
-    }
-  
-    .faculty-details h3 {
-      font-size: 1.4em;
-    }
-  
-    .faculty-designation {
-      font-size: 1em;
-    }
-  
-    .faculty-message {
-      font-size: 0.95em;
-    }
-  }
-  
-  /* Additional Styling */
-  .faculty-container::after {
-    content: ""; 
-    display: block; 
-    flex-basis: 100%; 
-    height: 0; 
-    order: 1; 
-    visibility: hidden; 
-  }
-  
+  padding: 50px 20px;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.faculty-section h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+.faculty-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.faculty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  width: 280px;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.faculty-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-glow);
+}
+
+.faculty-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--accent-primary);
+  transition: border-color var(--transition-smooth);
+}
+
+.faculty-card:hover .faculty-photo {
+  border-color: var(--accent-secondary);
+}
+
+.faculty-details h3 {
+  font-size: 1.3em;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.faculty-designation {
+  font-size: 0.95em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.faculty-message {
+  font-size: 0.95em;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .faculty-card { width: 100%; padding: 18px; }
+  .faculty-photo { width: 120px; height: 120px; }
+  .faculty-details h3 { font-size: 1.2em; }
+}
+
+.faculty-container::after {
+  content: "";
+  display: block;
+  flex-basis: 100%;
+  height: 0;
+  order: 1;
+  visibility: hidden;
+}

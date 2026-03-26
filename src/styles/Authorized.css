@@ -1,138 +1,84 @@
-/* Authorized.css */
-
+/* Authorized */
 .authorized-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
-  background: linear-gradient(
-    135deg,
-    #4caf4f,
-    #85af87,
-    #4caf4f
-  ); /* Gradient background */
-  color: #dcdcdc;
-  text-align: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
   padding: 20px;
 }
 
 .content-authorized {
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center;
+  animation: fadeIn 0.8s ease;
 }
 
 .welcome-message-authorized {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #0e6211;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
-/* .codenest-name-authorized {
-  color: #ff6e61f2;
-  font-size: 2.5rem;
-} */
-
 .logo-section-authorized {
-    text-align: center; /* Center-align logo and slogan */
-    margin: 20px 0; /* Vertical spacing around the section */
-  }
-  
-  .club-icon-logo-authorized {
-    width: 40px; /* Set desired width for the icon */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto 10px; /* Center and add spacing below icon */
-    display: block; /* Center icon */
-    opacity: 0.8; /* Slight opacity for a subtle look */
-    transition: transform 0.3s ease; /* Hover effect */
-  }
-  
-  .club-icon-logo-authorized:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-  }
-  
-  .club-name-logo-authorized {
-    width: 180px; /* Set desired width for logo */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the logo */
-    display: block; /* Ensure centering with margin auto */
-    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
-  }
-  
-  .club-name-logo-authorized:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  .club-slogan-logo-authorized:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  .club-slogan-logo-authorized {
-    width: 300px; /* Adjust width for slogan */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px auto 0; /* Spacing above slogan */
-    display: block; /* Center the slogan */
-    opacity: 0.9; /* Slight opacity for styling */
-    transition: transform 0.3s ease;
-  }
+  margin: 16px 0;
+}
+
+.club-icon-logo-authorized {
+  width: 50px;
+  height: auto;
+  margin: 0 auto 8px;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.club-name-logo-authorized {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.club-slogan-logo-authorized {
+  width: 300px;
+  height: auto;
+  margin: 8px auto 0;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
 
 .user-name-authorized {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #2a2a2a;
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 16px 0 8px;
 }
 
 .description-authorized {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 24px;
 }
 
 .action-button-authorized {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #f4f1f1;
-  color: #4caf50;
+  padding: 12px 28px;
+  background: var(--accent-gradient);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .action-button-authorized:hover {
-  background-color: #dcdcdc;
-  transform: scale(1.05); /* Slight scaling effect */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-  .welcome-message-authorized,
-  .user-name-authorized,
-  .codenest-name-authorized {
-    font-size: 2rem;
-  }
-
-  .club-icon-logo-authorized {
-    width: 30px; /* Smaller icon for tablets */
-  }
-
-  .club-name-logo-authorized {
-    width: 150px; /* Slightly reduce main logo size */
-  }
-
-  .club-slogan-logo-authorized {
-    width: 260px; /* Adjust slogan width */
-  }
-
-  .logo-section-authorized {
-    margin: 15px 0; /* Reduce vertical spacing */
-  }
-
-  .description-authorized {
-    font-size: 1rem;
-  }
-
-  .action-button-authorized {
-    font-size: 1rem;
-  }
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }

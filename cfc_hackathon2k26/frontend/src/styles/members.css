@@ -1,0 +1,217 @@
+.members-section {
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.members-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.glow-text-members {
+  font-family: var(--st-font-display);
+  font-size: 3rem;
+  color: var(--st-red);
+  text-shadow: 0 0 10px var(--st-red-glow);
+  letter-spacing: 4px;
+  animation: flicker 2s infinite alternate;
+}
+
+/* Heading */
+.members-title {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  color: #ff1e1e;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.members-subtitle {
+  color: #9aa4b2;
+  font-size: 18px;
+  margin-bottom: 70px;
+}
+
+/* Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Card */
+.member-card {
+  background: var(--st-bg-card);
+  border: 1px solid var(--st-border);
+  backdrop-filter: blur(12px);
+  padding: 40px 25px;
+  border-radius: var(--st-radius);
+  transition: var(--st-transition);
+}
+
+.member-card:hover {
+  border-color: var(--st-red);
+  box-shadow: 0 0 20px var(--st-red-dim);
+}
+
+/* Avatar */
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 25px auto;
+  border-radius: 50%;
+  border: 2px solid var(--st-red);
+  padding: 4px;
+  box-shadow: 0 0 20px var(--st-red-dim);
+  transition: var(--st-transition);
+}
+
+.member-avatar:hover {
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.557);
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Name */
+.member-name {
+  font-family: var(--st-font-classic);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Prize Label */
+.prize-place {
+  font-family: var(--st-font-classic);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Role */
+.member-role {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.member-description {
+  color: #9aa4b2;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.member-socials a {
+  color: #9aa4b2;
+  transition: 0.3s ease;
+
+}
+
+.member-socials a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+
+/* ===== MENTORS SECTION ===== */
+
+.mentors-section {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.mentors-heading {
+  margin-top: 40px;
+  color: #a855f7;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.mentor-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.mentor-card {
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(20, 20, 40, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  transition: 0.4s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.mentor-card h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.mentor-card h4 {
+  color: #a855f7;
+  margin-bottom: 5px;
+}
+
+.mentor-org {
+  display: block;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.mentor-card p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.mentor-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #9333ea, #6d28d9);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+}
+
+.mentor-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .glow-text-members {
+    font-size: 2rem;
+  }
+
+  .members-title {
+    font-size: 34px;
+  }
+}
+
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

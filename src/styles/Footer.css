@@ -1,70 +1,70 @@
+/* Footer */
 .footer {
-  background-color: #111;
-  color: #f0f0f0;
-  padding: 40px 20px;
-  animation: slideInUp 1.5s ease;
-  font-family: Arial, sans-serif;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 50px 20px;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.4), transparent);
 }
 
 .footer-content {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .footer h3 {
   margin: 0;
-  font-size: 2em;
-  font-weight: bold;
-  color: #f9c74f; /* Custom color for heading */
+  font-size: 1.8em;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer p {
   margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
 .footer-email {
   display: inline-block;
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #f9c74f;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--accent-secondary);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color var(--transition-fast), border-bottom var(--transition-fast);
 }
 
 .footer-email:hover {
-  color: #f0e68c;
-  border-bottom: 1px solid #f0e68c;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--accent-secondary);
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .footer {
-    padding: 30px 15px;
-  }
-
-  .footer h3 {
-    font-size: 1.8em;
-  }
-
-  .footer p, .footer-email {
-    font-size: 1em;
-  }
+  .footer { padding: 35px 15px; }
+  .footer h3 { font-size: 1.5em; }
+  .footer p, .footer-email { font-size: 0.95em; }
 }
 
 @media (max-width: 480px) {
-  .footer {
-    padding: 20px 10px;
-  }
-
-  .footer h3 {
-    font-size: 1.6em;
-  }
-
-  .footer p, .footer-email {
-    font-size: 0.9em;
-  }
+  .footer { padding: 25px 10px; }
+  .footer h3 { font-size: 1.3em; }
+  .footer p, .footer-email { font-size: 0.9em; }
 }

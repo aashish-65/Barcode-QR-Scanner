@@ -1,0 +1,105 @@
+/* ================= NAVBAR ================= */
+
+.custom-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1200;
+
+  background: rgba(10, 10, 10, 0.29) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 0, 0, 0.121);
+  padding: 0 40px !important;
+}
+
+/* ================= TOOLBAR ================= */
+
+.nav-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  display: flex;
+
+
+  width: 250px;
+  max-width: 60%;
+  height: auto;
+
+}
+
+/* ================= DESKTOP LINKS ================= */
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links .MuiButton-root {
+  color: #cccccc !important;
+  font-family: 'Cinzel', serif;
+  text-transform: none;
+  transition: 0.3s ease;
+}
+
+.nav-links .MuiButton-root:hover {
+  color: #ffffff !important;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.menu-btn {
+  display: none !important;
+  color: white !important;
+}
+
+/* ================= DRAWER ================= */
+
+.drawer-list {
+  width: 260px;
+  height: 100%;
+  padding: 50px 25px;
+  background: linear-gradient(180deg, #0a0a0a, #111, #050505);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.drawer-list .MuiButton-root {
+  color: #cccccc !important;
+  font-family: 'Cinzel', serif;
+  justify-content: flex-start;
+  text-transform: none;
+  transition: 0.3s ease;
+}
+
+.drawer-list .MuiButton-root:hover {
+  color: #ff2e2e !important;
+  transform: translateX(6px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block !important;
+  }
+
+  .custom-navbar {
+    padding: 0 20px !important;
+    height: 60px;
+  }
+}

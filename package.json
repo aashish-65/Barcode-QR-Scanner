@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@zxing/library": "^0.21.3",
     "axios": "^1.7.7",
+    "postprocessing": "^6.39.0",
     "qrcode": "^1.5.4",
     "quagga": "^0.12.1",
     "react": "^18.3.1",
@@ -24,6 +25,7 @@
     "react-qr-barcode-scanner": "^2.0.0",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
+    "three": "^0.183.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

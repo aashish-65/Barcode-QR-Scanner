@@ -1,4 +1,16 @@
+/* About */
 .about-section p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.2em;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1em;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .about-section p {
+    font-size: 0.95em;
+    line-height: 1.7;
+  }
 }

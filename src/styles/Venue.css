@@ -2,19 +2,17 @@
 .venue-section {
   padding: 60px 20px;
   text-align: center;
-  /* background-color: #f8f8f8; */
 }
 
 .venue-section h2 {
-  font-size: 2.5rem;
-  color: #444;
+  font-size: 2.2rem;
+  color: var(--text-primary);
   margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.05em;
 }
 
-/* Image Container with Fade-In and Fade-Out Effects */
 .venue-image-container {
   position: relative;
   width: 100%;
@@ -22,9 +20,9 @@
   height: 500px;
   margin: 0 auto 30px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  background-color: #ddd; /* Fallback color */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
 }
 
 .venue-image-fade {
@@ -37,47 +35,32 @@
   opacity: 0;
   animation: fadeEffect 1.5s ease-in-out forwards;
   transition: opacity 1.5s ease-in-out;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
-/* Fade Animation */
 @keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Map Container */
 .venue-map {
   margin-top: 30px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .venue-map iframe {
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
+  filter: brightness(0.8) contrast(1.1) saturate(0.8);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .venue-section h2 {
-    font-size: 2rem;
-  }
-
-  .venue-image-container {
-    height: 300px;
-  }
-
-  .venue-map {
-    height: 250px;
-  }
+  .venue-section h2 { font-size: 1.8rem; }
+  .venue-image-container { height: 300px; }
+  .venue-map { height: 250px; }
 }

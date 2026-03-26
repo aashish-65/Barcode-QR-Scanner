@@ -41,6 +41,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
+          <a href="/hackathon/" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
+            Hackathon
+          </a>
+        </li>
+        <li>
           <Link to="/scan" onClick={handleLinkClick}>
             Scan
           </Link>

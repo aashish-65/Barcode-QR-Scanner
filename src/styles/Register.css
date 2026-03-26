@@ -1,96 +1,123 @@
-/* Register.css */
-
+/* Register */
 .register-container {
-    max-width: 450px; /* Slightly wider for better readability */
-    width: 90%; /* Responsive width for smaller screens */
-    margin: 40px auto; /* Center and add space above */
-    padding: 25px;
-    border-radius: 10px;
-    background-color: #f4f3f3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-  }
-  
-  .club-name-register {
-    text-align: center; /* Center align the club name */
-    color: #ff6f61; /* Primary color for the club name */
-    font-size: 2.5em; /* Larger font size for emphasis */
-    margin-bottom: 15px; /* Spacing below the club name */
-    font-weight: bold; /* Make it bold */
-  }
-  
-  .register-title {
-    text-align: center;
-    color: #2a2a2a;
-    font-size: 30px;
-    margin-bottom: 25px;
-    font-weight: 600;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-  
-  input:focus {
-    border-color: #007bff; /* Primary color for focused input */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-  }
-  
-  button {
-    padding: 12px;
-    background-color: #3f3f3f; /* Primary button color */
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #111111; /* Darker shade on hover */
-  }
-  
-  .error-message,
-  .success-message {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .error-message {
-    color: #e63946; /* Red color for errors */
-  }
-  
-  .success-message {
-    color: #2a9d8f; /* Green color for success messages */
-  }
-  
-  .back-button-register {
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #6c757d; /* Gray for back button */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .back-button-register:hover {
-    background-color: #2a2a2a; /* Darker gray on hover */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 30px 20px;
+}
+
+.register-container .logo-section {
+  margin-bottom: 20px;
+}
+
+.register-container .club-icon-logo {
+  filter: brightness(0) invert(1);
+}
+
+.register-container .club-name-logo {
+  filter: brightness(0) invert(1);
+}
+
+.register-container .club-slogan-logo {
+  filter: brightness(0) invert(1);
+}
+
+.register-title {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.register-container form {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-container input {
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.register-container input::placeholder {
+  color: var(--text-muted);
+}
+
+.register-container input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* Remove number input spinners */
+.register-container input[type="number"]::-webkit-inner-spin-button,
+.register-container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.register-container input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.register-container button[type="submit"] {
+  padding: 12px;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  margin-top: 4px;
+}
+
+.register-container button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+.back-button-register {
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.back-button-register:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.success-message {
+  color: #22c55e;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}

@@ -119,7 +119,7 @@ const Events = () => {
             💡💻🔥
           </p>
           <Link
-            to="https://ossdc-hackathon-2025.netlify.app/"
+            to="/hackathon/"
             target="_blank"
             rel="noopener noreferrer"
           >

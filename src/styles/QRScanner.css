@@ -1,44 +1,46 @@
+/* QR Scanner */
 .qr-scanner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #007bff; /* Blue border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    background-color: #f8f9fa; /* Light background */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
-    max-width: 600px; /* Limit width for smaller screens */
-    margin: 0 auto; /* Center container on page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 20px;
+}
+
+.qr-scanner-container video {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  max-width: 500px;
+  width: 100%;
 }
 
 .loading-message-scanner {
-    color: #007bff; /* Blue color for loading */
-    font-size: 18px;
-    font-weight: bold; /* Emphasize loading text */
-    margin-bottom: 10px;
+  color: var(--accent-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .error-message-scanner {
-    color: #d9534f; /* Slightly softer red for errors */
-    font-size: 16px;
-    font-weight: bold; /* Emphasize error text */
-    text-align: center; /* Center-align for readability */
-    margin-bottom: 10px;
+  color: #ef4444;
+  font-size: 0.95rem;
 }
 
 .back-button-scanner {
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #6c757d; /* Gray for back button */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .back-button-scanner:hover {
-    background-color: #5a6268; /* Darker gray on hover */
-  }
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.back-button-scanner:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}

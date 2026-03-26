@@ -1,75 +1,41 @@
-/* Unauthorized.css */
-
+/* Unauthorized */
 .unauthorized-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    background: linear-gradient(135deg, #F44336, #ef5350cd, #e91e1e); /* Gradient background */
-    color: white;
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 20px;
+  text-align: center;
 }
 
-.content-unauthorized {
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+.unauthorized-container h2 {
+  color: #ef4444;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.unauthorized-message {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #c70f0f;
+.unauthorized-container p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
 
-.description-unauthorized {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.unauthorized-container button {
+  padding: 12px 28px;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.register-button-unauthorized, .back-button-unauthorized {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.register-button-unauthorized {
-    background-color: #ffffff;
-    color: #F44336;
-}
-
-.register-button-unauthorized:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05); /* Slight scaling effect */
-}
-
-.back-button-unauthorized {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #F44336;
-}
-
-.back-button-unauthorized:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-    .unauthorized-message {
-        font-size: 2rem;
-    }
-
-    .description-unauthorized {
-        font-size: 1rem;
-    }
-
-    .register-button-unauthorized, .back-button-unauthorized {
-        font-size: 1rem;
-    }
+.unauthorized-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }

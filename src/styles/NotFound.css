@@ -1,72 +1,47 @@
-/* NotFound.css */
-
-.notfound-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #f44336, #ef5350); /* Gradient background */
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* NotFound */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  padding: 20px;
 }
 
-.content-notfound {
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+.not-found-container h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
 }
 
-.error-code {
-    font-size: 6rem; /* Large font size for error code */
-    margin-bottom: 10px;
-    color: #ddd2d1;
+.not-found-container p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin: 16px 0 24px;
 }
 
-.error-message-notfound {
-    font-size: 2rem; /* Medium font size for error message */
-    margin-bottom: 10px;
-    color: #7e5c5a;
+.not-found-container a,
+.not-found-container button {
+  padding: 12px 28px;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.description-notfound {
-    font-size: 1.2rem; /* Standard font size for description */
-    margin-bottom: 20px;
-}
-
-.home-button-notfound {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    background-color: #ffffff; /* White background for button */
-    color: #f44336; /* Matching color with the gradient */
-}
-
-.home-button-notfound:hover {
-    background-color: #f0f0f0; /* Lighten button on hover */
-    transform: scale(1.05); /* Slight scaling effect */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 600px) {
-    .error-code {
-        font-size: 4rem; /* Smaller font size for mobile */
-    }
-
-    .error-message-notfound {
-        font-size: 1.5rem; /* Smaller error message */
-    }
-
-    .description-notfound {
-        font-size: 1rem; /* Smaller description */
-    }
-
-    .home-button-notfound {
-        font-size: 1rem; /* Smaller button text */
-    }
+.not-found-container a:hover,
+.not-found-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }
