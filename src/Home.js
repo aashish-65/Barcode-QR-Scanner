@@ -39,6 +39,19 @@ function Home() {
       />
       <Header />
       <Navbar />
+      {/* Upcoming Hackathon Banner */}
+      <section className="hackathon-banner">
+        <a href="/hackathon/" target="_blank" rel="noopener noreferrer">
+          <h2 className="hackathon-banner-heading">🚀 Upcoming Hackathon</h2>
+          <div className="hackathon-banner-img-wrapper">
+            <img
+              src={`${process.env.PUBLIC_URL}/codeforchange2.0.jpeg`}
+              alt="Code for Change 2.0 Hackathon"
+              className="hackathon-banner-img"
+            />
+          </div>
+        </a>
+      </section>
       {/* <CountDown /> */}
       <RegistrationCount />
       <Graph />
