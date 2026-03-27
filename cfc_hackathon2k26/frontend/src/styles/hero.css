@@ -170,6 +170,20 @@
   background: rgba(0, 255, 255, 0.1) !important;
 }
 
+.discord-btn {
+  background-color: #5865F2 !important;
+  border-color: #5865F2 !important;
+  color: #fff !important;
+  font-family: var(--st-font-classic) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 14px rgba(88, 101, 242, 0.5) !important;
+}
+
+.discord-btn:hover {
+  background-color: #4752c4 !important;
+  box-shadow: 0 0 24px rgba(88, 101, 242, 0.7) !important;
+}
+
 @media (max-height: 760px) {
   .hero-container {
     justify-content: flex-start;

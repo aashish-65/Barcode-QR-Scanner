@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Photo1Img from "../assets/Venue/Photo1.jpg";
-import Photo2Img from "../assets/Venue/Photo2.jpg";
-import Photo3Img from "../assets/Venue/Photo3.jpg";
-import Photo4Img from "../assets/Venue/Photo4.jpg";
 import "../styles/Venue.css";
 
 const venueImages = [
-  Photo1Img,
-  Photo2Img,
-  Photo3Img,
-  Photo4Img,
-  "https://www.nshm.com/computinganalytics/durgapur/images/about.png",
+  `${process.env.PUBLIC_URL}/1.jpeg`,
+  `${process.env.PUBLIC_URL}/2.jpeg`,
+  `${process.env.PUBLIC_URL}/3.png`,
+  `${process.env.PUBLIC_URL}/4.jpeg`,
+  `${process.env.PUBLIC_URL}/5.jpeg`,
+  `${process.env.PUBLIC_URL}/6.jpeg`,
+  `${process.env.PUBLIC_URL}/7.jpeg`,
 ];
 const Venue = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -58,7 +58,7 @@ h2 {
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   background: linear-gradient(
     90deg,
     #7c3aed, #a78bfa, #c084fc, #7c3aed
@@ -70,6 +70,29 @@ h2 {
   animation: shimmerText 3s ease-in-out infinite;
   text-shadow: none;
   position: relative;
+}
+
+.hackathon-banner-cta {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.hackathon-banner a:hover .hackathon-banner-cta {
+  color: #a78bfa;
+}
+
+.hackathon-banner-cta::after {
+  content: '';
+  display: inline-block;
+  animation: bounceArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
 }
 
 /* Animated border wrapper around the image */
