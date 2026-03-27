@@ -42,6 +42,11 @@ function Home() {
       <section className="hackathon-banner">
         <a href="/hackathon/" target="_blank" rel="noopener noreferrer">
           <h2 className="hackathon-banner-heading">🚀 Upcoming Hackathon</h2>
+          <img
+            src={`${process.env.PUBLIC_URL}/codeforchange2.0 banner.png`}
+            alt="Code for Change 2.0 Hackathon"
+            className="hackathon-banner-img"
+          />
           <p className="hackathon-banner-cta">Click here to find out more →</p>
         </a>
       </section>

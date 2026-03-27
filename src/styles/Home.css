@@ -96,59 +96,18 @@ h2 {
 }
 
 /* Animated border wrapper around the image */
-.hackathon-banner-img-wrapper {
-  position: relative;
-  display: inline-block;
-  padding: 4px;
-  border-radius: 20px;
-  background: linear-gradient(
-    135deg, #7c3aed, #a78bfa, #06b6d4, #7c3aed
-  );
-  background-size: 400% 400%;
-  animation: borderGlow 4s ease infinite;
-}
 
 .hackathon-banner-img {
   max-width: 700px;
-  width: 100%;
+  width: 90%;
   border-radius: 16px;
   display: block;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  margin: 0 auto 12px;
+  transition: transform 0.3s ease;
 }
 
-.hackathon-banner-img-wrapper:hover .hackathon-banner-img {
-  transform: scale(1.03);
-  filter: brightness(1.1);
-}
-
-.hackathon-banner-img-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: 24px;
-  background: linear-gradient(
-    135deg, #7c3aed, #a78bfa, #06b6d4, #7c3aed
-  );
-  background-size: 400% 400%;
-  animation: borderGlow 4s ease infinite;
-  z-index: -1;
-  filter: blur(20px);
-  opacity: 0.6;
-}
-
-/* Pulsing glow behind image */
-.hackathon-banner-img-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: -16px;
-  border-radius: 28px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(124, 58, 237, 0.4) 0%,
-    transparent 70%
-  );
-  animation: pulseGlow 3s ease-in-out infinite;
-  z-index: -2;
+.hackathon-banner-img:hover {
+  transform: scale(1.02);
 }
 
 @keyframes shimmerText {
