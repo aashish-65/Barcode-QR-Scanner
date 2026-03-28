@@ -79,7 +79,7 @@ const Hero = () => {
             <Button
               variant="outlined"
               className="discord-btn"
-              href="https://discord.gg/JXAHnGAU"
+              href="https://discord.gg/VPprt8haws"
               target="_blank"
               rel="noopener noreferrer"
               startIcon={
